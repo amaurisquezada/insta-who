@@ -23,7 +23,9 @@ Rails.application.routes.draw do
 
   get 'users/destroy'
 
-  root 'users#new'
+  get 'users/test'
+
+  root 'users#test'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
