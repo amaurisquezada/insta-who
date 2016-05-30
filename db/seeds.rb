@@ -1,5 +1,5 @@
 User.create(email: "aq@gmail.com", username: "aq123", password: "amauris", password_confirmation: "amauris")
-User.where.(username: "aq123").first.games.create(name: "my_first_game")
+User.where(username: "aq123").first.games.create(name: "my_first_game")
 Game.where(name: "my_first_game").first.cards.create([
 	{name: "Amauris"},
 	{name: "Donovan"},
