@@ -1,8 +1,7 @@
 Hi, <%= @user.email %>!
 <br>
-<%= link_to "Create a post and upload an image", new_post_path %>
-<br>
-<%= link_to "All posts", posts_path %>
+<%= image_tag @user.avatar.url(:medium) %>
 <hr>
-<%= link_to "LOG OUT", logout_path, method: :delete %>
+<%= link_to "Upload an profile pic", new_user_path %>
 <br>
+<%= link_to "LOG OUT", logout_path, method: :delete %>
