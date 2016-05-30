@@ -63,4 +63,49 @@ Tag.create([
 	{description:"does not have earrings"}])
 
 
-Card.where(name: "Nial").first.tags << [Tag.find(3), Tag.find(6), Tag.find(10), Tag.find(12), Tag.find(17), Tag.find(18), Tag.find(20), Tag.find(22), Tag.find(25), Tag.find(26), Tag.find(29), Tag.find(32), Tag.find(34), Tag.find(28)]
+Card.where(name: "Amauris").first.tags << [Tag.find(1), Tag.find(6), Tag.find(10), Tag.find(11), Tag.find(17), Tag.find(19), Tag.find(20), Tag.find(22), Tag.find(24), Tag.find(26), Tag.find(29), Tag.find(32), Tag.find(34), Tag.find(28)]
+
+Card.where(name: "Donovan").first.tags << [Tag.find(1), Tag.find(7), Tag.find(10), Tag.find(11), Tag.find(15), Tag.find(19), Tag.find(20), Tag.find(22), Tag.find(25), Tag.find(26), Tag.find(29), Tag.find(31), Tag.find(34), Tag.find(28)]
+
+Card.where(name: "Chris").first.tags << [Tag.find(1), Tag.find(6), Tag.find(10), Tag.find(11), Tag.find(17), Tag.find(19), Tag.find(20), Tag.find(22), Tag.find(25), Tag.find(26), Tag.find(29), Tag.find(32), Tag.find(34), Tag.find(28)]
+
+Card.where(name: "Jerry").first.tags << [Tag.find(1), Tag.find(6), Tag.find(10), Tag.find(11), Tag.find(17), Tag.find(18), Tag.find(20), Tag.find(23), Tag.find(24), Tag.find(26), Tag.find(29), Tag.find(31), Tag.find(34), Tag.find(28)]
+
+Card.where(name: "Kim").first.tags << [Tag.find(1), Tag.find(5), Tag.find(10), Tag.find(11), Tag.find(17), Tag.find(18), Tag.find(21), Tag.find(23), Tag.find(25), Tag.find(27), Tag.find(30), Tag.find(32), Tag.find(33)]
+
+Card.where(name: "Ohad").first.tags << [Tag.find(1), Tag.find(6), Tag.find(10), Tag.find(12), Tag.find(17), Tag.find(18), Tag.find(20), Tag.find(22), Tag.find(25), Tag.find(26), Tag.find(30), Tag.find(31), Tag.find(34)]
+
+Card.where(name: "Quinn").first.tags << [Tag.find(1), Tag.find(7), Tag.find(8), Tag.find(11), Tag.find(16), Tag.find(19), Tag.find(20), Tag.find(22), Tag.find(25), Tag.find(27), Tag.find(30), Tag.find(32), Tag.find(34), Tag.find(28)]
+
+Card.where(name: "Kirsten").first.tags << [Tag.find(1), Tag.find(5), Tag.find(10), Tag.find(11), Tag.find(17), Tag.find(19), Tag.find(21), Tag.find(23), Tag.find(25), Tag.find(26), Tag.find(29), Tag.find(31), Tag.find(33), Tag.find(28)]
+
+Card.where(name: "Alex").first.tags << [Tag.find(1), Tag.find(7), Tag.find(10), Tag.find(11), Tag.find(17), Tag.find(19), Tag.find(20), Tag.find(22), Tag.find(25), Tag.find(26), Tag.find(29), Tag.find(32), Tag.find(34), Tag.find(28)]
+
+Card.where(name: "Mandisa").first.tags << [Tag.find(1), Tag.find(5), Tag.find(10), Tag.find(11), Tag.find(15), Tag.find(19), Tag.find(21), Tag.find(23), Tag.find(25), Tag.find(26), Tag.find(29), Tag.find(31), Tag.find(33)]
+
+Card.where(name: "Juan").first.tags << [Tag.find(1), Tag.find(7), Tag.find(10), Tag.find(11), Tag.find(16), Tag.find(18), Tag.find(20), Tag.find(22), Tag.find(24), Tag.find(26), Tag.find(29), Tag.find(32), Tag.find(34)]
+
+Card.where(name: "Kassim").first.tags << [Tag.find(1), Tag.find(7), Tag.find(10), Tag.find(11), Tag.find(16), Tag.find(19), Tag.find(20), Tag.find(22), Tag.find(25), Tag.find(26), Tag.find(29), Tag.find(31), Tag.find(33)]
+
+Card.where(name: "Jay").first.tags << [Tag.find(1), Tag.find(6), Tag.find(9), Tag.find(11), Tag.find(17), Tag.find(19), Tag.find(20), Tag.find(22), Tag.find(24), Tag.find(26), Tag.find(29), Tag.find(32), Tag.find(33), Tag.find(28)]
+
+Card.where(name: "Rick").first.tags << [Tag.find(35), Tag.find(6), Tag.find(10), Tag.find(12), Tag.find(17), Tag.find(18), Tag.find(20), Tag.find(22), Tag.find(24), Tag.find(27), Tag.find(30), Tag.find(31), Tag.find(34), Tag.find(28)]
+
+Card.where(name: "Bill").first.tags << [Tag.find(1), Tag.find(6), Tag.find(10), Tag.find(11), Tag.find(17), Tag.find(19), Tag.find(20), Tag.find(22), Tag.find(25), Tag.find(26), Tag.find(30), Tag.find(32), Tag.find(34), Tag.find(28)]
+
+Card.where(name: "Matt E").first.tags << [Tag.find(2), Tag.find(4), Tag.find(8), Tag.find(9), Tag.find(11), Tag.find(17), Tag.find(19), Tag.find(20), Tag.find(22), Tag.find(25), Tag.find(27), Tag.find(29), Tag.find(31), Tag.find(34), Tag.find(28)]
+
+Card.where(name: "Sanja").first.tags << [Tag.find(1), Tag.find(5), Tag.find(10), Tag.find(11), Tag.find(17), Tag.find(18), Tag.find(21), Tag.find(23), Tag.find(25), Tag.find(27), Tag.find(30), Tag.find(32), Tag.find(34)]
+
+Card.where(name: "Matt S").first.tags << [Tag.find(1), Tag.find(5), Tag.find(8), Tag.find(9), Tag.find(11), Tag.find(17), Tag.find(19), Tag.find(20), Tag.find(22), Tag.find(25), Tag.find(27), Tag.find(29), Tag.find(31), Tag.find(34), Tag.find(28)]
+
+Card.where(name: "Amzad").first.tags << [Tag.find(1), Tag.find(6), Tag.find(10), Tag.find(11), Tag.find(16), Tag.find(19), Tag.find(20), Tag.find(23), Tag.find(25), Tag.find(26), Tag.find(29), Tag.find(31), Tag.find(34)]
+
+Card.where(name: "Greg").first.tags << [Tag.find(1), Tag.find(7), Tag.find(10), Tag.find(11), Tag.find(16), Tag.find(19), Tag.find(20), Tag.find(22), Tag.find(25), Tag.find(27), Tag.find(29), Tag.find(32), Tag.find(34), Tag.find(28)]
+
+Card.where(name: "Sam").first.tags << [Tag.find(1), Tag.find(6), Tag.find(10), Tag.find(12), Tag.find(17), Tag.find(19), Tag.find(20), Tag.find(22), Tag.find(25), Tag.find(26), Tag.find(29), Tag.find(31), Tag.find(33), Tag.find(28)]
+
+Card.where(name: "Liana").first.tags << [Tag.find(1), Tag.find(5), Tag.find(10), Tag.find(11), Tag.find(17), Tag.find(19), Tag.find(21), Tag.find(23), Tag.find(25), Tag.find(27), Tag.find(29), Tag.find(32), Tag.find(33)]
+
+Card.where(name: "Andy").first.tags << [Tag.find(3), Tag.find(6), Tag.find(8), Tag.find(9), Tag.find(12), Tag.find(17), Tag.find(18), Tag.find(20), Tag.find(22), Tag.find(25), Tag.find(26), Tag.find(29), Tag.find(31), Tag.find(34), Tag.find(28)]
+
