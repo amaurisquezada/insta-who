@@ -1,0 +1,23 @@
+SIGN UP
+<%= form_for @user do |f| %>
+<%= f.label :email %>
+<%= f.text_field :email %>
+<%= f.label :password %>
+<%= f.password_field :password %>
+<%= f.submit %>
+<% end %>
+<hr>
+LOG IN
+<%= form_tag login_path do %>
+<%= label_tag :email %>
+<%= text_field_tag :email %>
+<%= label_tag :password %>
+<%= password_field_tag :password %>
+<%= submit_tag %>
+<% end %>
+<hr>
+<% if 1 %>
+<%= link_to "LOG OUT", logout_path, method: :delete %>
+<% else %>
+You are not logged in.
+<% end %>
