@@ -4,11 +4,21 @@ $(document).ready(function(){
 	}
 
 	non_match = function(el){
-		el.css('background', 'black')
+		el.css('transform', 'rotateX(-180deg)')
 	}
 
-	$('#amauris').click(function(){
-		$('#amauris').css('transform', 'rotateX(180deg)')
-	})
+	$('#answer').keypress(function(e){
+  if (e.which == 13) {
+    $('#answer-submit').submit();
+    $('#answer').val('')
+    return false;
+  }
+});
+
+	$('#answer-submit').click(function(){
+  	$('#answer-submit').submit();
+    $('#answer').val('')
+    return false;
+  });
 
 })

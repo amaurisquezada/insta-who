@@ -1,24 +1,97 @@
 #card-container {
-	perspective: 700;
+	perspective: 5000px;
+	width: 70%;
 }
 
 
-.cards {
-	height: 15vh;
-	width: 15vw;
-	background: grey;
+.one-card-container {
+	position: relative;
+	height: 22vh;
+	width: 22vh;
 	margin: 10px 10px 0 0;
 	float: left;
 	transition: all 0.6s ease;
 	transform-style: preserve-3d;
 }
 
+.front, .back {
+	height: 22vh;
+	width: 22vh;
+	position: absolute;
+	top: 0;
+	left: 0;
+	backface-visibility: hidden;
+	border-radius: 4px;
+}
+
+.front {
+	background: grey;
+}
+
+
+.back {
+	background: url(question-mark.png);
+	background-size: 22vh 22vh;
+	background-position: center center;
+	transform: rotateX(-180deg);
+}
+
 .selected {
-	height: 20vh;
-	width: 20vh;
+	height: 22vh;
+	width: 22vh;
 	background: blue;
-	float: left;
 	clear: both;
-	margin-left: 40%;
-	margin-top: 10px;
+	position: absolute;
+	top: 10px;
+	right: 13%;
+}
+
+#keywords {
+	position: relative;
+	top: 29vh;
+}
+
+#input-field {
+	position: relative;
+	top: 25vh;
+	left: 8%;
+}
+
+.guesses {
+	height: 10px;
+	width: 10px;
+	border-radius: 5px;
+	border: black 1px solid;
+	background: white;
+	float: left;
+	margin-right: 10%;
+}
+
+#all-guesses {
+	width :22vh;
+	height: 12px;
+	padding: 0;
+	margin: 0;
+	position: absolute;
+	top: 24vh;
+	right: 12%;
+}
+
+#you-win, #you-lose{
+	position: relative;
+	left: 8%;
+	top: 35vh;
+	display: none;
+}
+
+#result-win, #result-lose {
+	font-size: 50px;
+}
+
+#result-win {
+	color: green;
+}
+
+#result-lose {
+	color: red;
 }
