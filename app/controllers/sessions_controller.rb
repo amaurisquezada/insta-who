@@ -9,7 +9,7 @@ class SessionsController < ApplicationController
       redirect_to user_path(@user), :notice => "Welcome back, #{@user.email}"
     else
       flash[:alert] = "Invalid email or password"
-      render 'new'
+      redirect_to :back
     end
   end
 

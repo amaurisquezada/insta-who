@@ -1,2 +1,16 @@
-<h1>Users#edit</h1>
-<p>Find me in app/views/users/edit.html.erb</p>
+<%= form_for @user, :html => { :multipart => true } do |f| %>
+	<%=f.label :email %>
+	<%=f.text_field :email %>
+	<br><br>
+	<%= f.label :password %>
+	<%= f.password_field :password %>
+	<%=f.hidden_field :user_id, value: current_user.id %>
+	<br><br>
+	<div class="actions">
+    <%= f.file_field :avatar %>
+  </div><br><br>
+	<%=f.submit "Update User" %>
+<% end %>
+<br><br>
+
+<%= link_to "delete user", user_path(@user), method: :delete %>
