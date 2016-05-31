@@ -1,60 +1,62 @@
 <% @mygame = Game.find(1) %>
 <% @mycard = @mygame.cards.sample %>
-<% @mygame.cards.each do |student| %>
-<div id=<%=student.name.gsub(" ", "-").downcase%> class="cards"><%= student.name %></div>
-<% end %>
-<div id=<%=@mycard.name.gsub(" ", "-").downcase%> class="selected"><%= @mycard.name %></div>
-<%= text_field_tag 'answer'%>
-<%= submit_tag 'Submit', id: 'answer-submit'%>
-<script type="text/javascript">
-	$('#answer-submit').click(function(){
-		<% @mygame.cards.each do |student| %>
-		<% @my_tags = student.tags.map(&:description) %>
-		check = $('#answer').val()
-		array = <%= raw @my_tags %>
-		myCardAttr = <%= raw @mycard.tags.map(&:description) %>
-	if (array.includes(check) === myCardAttr.includes(check) && $('#' + "<%=student.name.gsub(" ", "-").downcase%>").css('background-color') !== "rgb(0, 0, 0)"){
-		desc_match($('#' + "<%=student.name.gsub(" ", "-").downcase%>"))
-	}	else {
-		non_match($('#' + "<%=student.name.gsub(" ", "-").downcase%>"))
-	}	
-		<% end %>
-	})
-</script>
-<div>
-	"dark hair"
-"red hair"
-"blonde hair"
-"bald"
-"long hair"
-"medium hair"
-"short hair"
-"beard"
-"mustache"
-"clean shaven"
-"dark eyes"
-"green eyes"
-"blue eyes"
-"colored contacts"
-"dark skin"
-"brown skin"
-"light skin"
-"has glasses"
-"no glasses"
-"male"
-"female"
-"is tall"
-"is short"
-"pc computer"
-"mac computer"
-"younger than 30"
-"older than 30"
-"native new yorker"
-"single"
-"married"
-"likes pepperoni pizza"
-"likes cheese pizza"
-"has earrings"
-"does not have earrings"
-"grey hair"
+<div id="card-container">
+	<% @mygame.cards.each do |student| %>
+		<div id=<%=student.name.gsub(" ", "-").downcase%> class="cards"><%= student.name %></div>
+	<% end %>
 </div>
+	<div id=<%=@mycard.name.gsub(" ", "-").downcase%> class="selected"><%= @mycard.name %></div>
+	<%= text_field_tag 'answer'%>
+	<%= submit_tag 'Submit', id: 'answer-submit'%>
+	<script type="text/javascript">
+		$('#answer-submit').click(function(){
+			<% @mygame.cards.each do |student| %>
+				<% @my_tags = student.tags.map(&:description) %>
+				check = $('#answer').val()
+				array = <%= raw @my_tags %>
+				myCardAttr = <%= raw @mycard.tags.map(&:description) %>
+				if (array.includes(check) === myCardAttr.includes(check) && $('#' + "<%=student.name.gsub(" ", "-").downcase%>").css('background-color') !== "rgb(0, 0, 0)"){
+					desc_match($('#' + "<%=student.name.gsub(" ", "-").downcase%>"))
+				}	else {
+						non_match($('#' + "<%=student.name.gsub(" ", "-").downcase%>"))
+					}	
+			<% end %>
+		})
+	</script>
+	<div>
+		"dark hair"
+		"red hair"
+		"blonde hair"
+		"bald"
+		"long hair"
+		"medium hair"
+		"short hair"
+		"beard"
+		"mustache"
+		"clean shaven"
+		"dark eyes"
+		"green eyes"
+		"blue eyes"
+		"colored contacts"
+		"dark skin"
+		"brown skin"
+		"light skin"
+		"has glasses"
+		"no glasses"
+		"male"
+		"female"
+		"is tall"
+		"is short"
+		"pc computer"
+		"mac computer"
+		"younger than 30"
+		"older than 30"
+		"native new yorker"
+		"single"
+		"married"
+		"likes pepperoni pizza"
+		"likes cheese pizza"
+		"has earrings"
+		"does not have earrings"
+		"grey hair"
+	</div>

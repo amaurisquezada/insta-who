@@ -95,7 +95,7 @@ Card.where(name: "Bill").first.tags << [Tag.find(1), Tag.find(6), Tag.find(10), 
 
 Card.where(name: "Matt E").first.tags << [Tag.find(2), Tag.find(4), Tag.find(8), Tag.find(9), Tag.find(11), Tag.find(17), Tag.find(19), Tag.find(20), Tag.find(22), Tag.find(25), Tag.find(27), Tag.find(29), Tag.find(31), Tag.find(34), Tag.find(28)]
 
-Card.where(name: "Sanja").first.tags << [Tag.find(1), Tag.find(5), Tag.find(10), Tag.find(11), Tag.find(17), Tag.find(18), Tag.find(21), Tag.find(23), Tag.find(25), Tag.find(27), Tag.find(30), Tag.find(32), Tag.find(34)]
+Card.where(name: "Sanja").first.tags << [Tag.find(1), Tag.find(5), Tag.find(10), Tag.find(11), Tag.find(17), Tag.find(18), Tag.find(21), Tag.find(23), Tag.find(25), Tag.find(27), Tag.find(30), Tag.find(32), Tag.find(33)]
 
 Card.where(name: "Matt S").first.tags << [Tag.find(1), Tag.find(5), Tag.find(8), Tag.find(9), Tag.find(11), Tag.find(17), Tag.find(19), Tag.find(20), Tag.find(22), Tag.find(25), Tag.find(27), Tag.find(29), Tag.find(31), Tag.find(34), Tag.find(28)]
 

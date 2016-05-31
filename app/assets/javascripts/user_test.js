@@ -6,4 +6,9 @@ $(document).ready(function(){
 	non_match = function(el){
 		el.css('background', 'black')
 	}
+
+	$('#amauris').click(function(){
+		$('#amauris').css('transform', 'rotateX(180deg)')
+	})
+
 })
