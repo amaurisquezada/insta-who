@@ -30,8 +30,8 @@ class UsersController < ApplicationController
   end
 
   def show
-    current_user
-    @user = User.find(current_user.id)
+    # current_user
+    # @user = User.find(current_user.id)
   end
 
   def index

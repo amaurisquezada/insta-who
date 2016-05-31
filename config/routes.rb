@@ -25,7 +25,7 @@ Rails.application.routes.draw do
 
   get 'users/test'
 
-  root 'users#show'
+  root 'users#test'
 
   get 'login' => 'sessions#new'
   post 'login' => 'sessions#create'
