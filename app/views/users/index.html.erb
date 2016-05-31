@@ -1,10 +1,12 @@
 SIGN UP
-<%= form_for @user do |f| %>
+<%= form_for @user, :url => users_path, :html => { :multipart => true } do |f| %>
 <%= f.label :email %>
 <%= f.text_field :email %>
 <%= f.label :password %>
 <%= f.password_field :password %>
-<%= f.submit %>
+<%= f.label :avatar %>
+<%= f.file_field :avatar %>
+<%= f.submit :submit, data: {disable_with: "Submitting..."} %>
 <% end %>
 <hr>
 LOG IN

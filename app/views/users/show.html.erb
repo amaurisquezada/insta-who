@@ -2,6 +2,4 @@ Hi, <%= @user.email %>!
 <br>
 <%= image_tag @user.avatar.url(:medium) %>
 <hr>
-<%= link_to "Upload an profile pic", new_user_path %>
-<br>
 <%= link_to "LOG OUT", logout_path, method: :delete %>

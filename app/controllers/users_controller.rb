@@ -8,7 +8,6 @@ class UsersController < ApplicationController
     @user.save
     if @user.save
       log_in @user
-      # session[:user_id] = @user.id
       redirect_to @user
     else
       render 'new'
