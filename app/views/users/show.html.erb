@@ -1,5 +1,8 @@
-Hi, <%= @user.email %>!
 <br>
 <%= image_tag @user.avatar.url(:medium) %>
+<br>
+	<%= link_to "Edit Profile", edit_user_path(@user) %>
 <hr>
 <%= link_to "LOG OUT", logout_path, method: :delete %>
+<br>
+<%= link_to "DELETE USER", user_path(@user), method: :delete %>

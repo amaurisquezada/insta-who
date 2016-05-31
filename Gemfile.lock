@@ -100,15 +100,12 @@ GEM
     mini_portile2 (2.0.0)
     minitest (5.9.0)
     multi_json (1.12.1)
-<<<<<<< HEAD
-    nokogiri (1.6.7.2)
-      mini_portile2 (~> 2.0.0.rc2)
-=======
     net-ssh (3.1.1)
     net-ssh-gateway (1.2.0)
       net-ssh (>= 2.6.5)
     netrc (0.11.0)
->>>>>>> 14e78db8e1956cffcdcd1d60af0bd87c51063ab9
+    nokogiri (1.6.7.2)
+      mini_portile2 (~> 2.0.0.rc2)
     nokogiri (1.6.7.2-x86-mingw32)
       mini_portile2 (~> 2.0.0.rc2)
     paperclip (4.3.6)

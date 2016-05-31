@@ -1,4 +1,14 @@
 class UsersController < ApplicationController
+
+  # before_action :logged_in_user, only: [:edit, :update]
+
+  # def logged_in_user
+  #   unless logged_in?
+  #     flash[:danger] = "Please log in"
+  #     redirect_to login_url
+  #   end
+  # end
+
   def new
     @user = User.new
   end
@@ -18,12 +28,26 @@ class UsersController < ApplicationController
   end
 
   def destroy
+    User.where(id: params[:id]).each do |user|
+        user.delete
+      end
+    redirect_to users_path
+    flash[:alert] = "Your account has been destroyed"
   end
 
   def edit
+    @user = User.find(params[:id])
   end
 
   def update
+    @user = User.find(params[:id])
+    if @user.update(user_params)
+      flash[:notice] = "User updated successfully"
+      redirect_to user_path(@user)
+    else
+      flash[:alert] = "Update failed"
+      render :edit
+    end
   end
 
   def test
