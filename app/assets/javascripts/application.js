@@ -12,5 +12,6 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require jquery.flip.js
 //= require turbolinks
 //= require_tree .
