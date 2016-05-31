@@ -1,4 +1,4 @@
-{description:"dark hair"},
+	{description:"dark hair"},
 	{description:"red hair"},
 	{description:"blonde hair"},
 	{description:"bald"},

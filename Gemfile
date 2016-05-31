@@ -1,5 +1,13 @@
 source 'https://rubygems.org'
 
+group :development do
+  gem "better_errors"
+end
+
+gem "binding_of_caller"
+
+gem "paperclip", "~> 4.2"
+
 gem 'heroku'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.6'
