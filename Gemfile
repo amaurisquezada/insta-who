@@ -1,5 +1,8 @@
 source 'https://rubygems.org'
 
+# facebook OAuth gem
+gem 'omniauth-facebook'
+
 group :development do
   gem "better_errors"
 end
