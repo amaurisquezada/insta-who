@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'home/home'
+
   get 'users/new'
 
   get 'users/create'
@@ -11,21 +13,15 @@ Rails.application.routes.draw do
 
   get 'users/update'
 
-  get 'users/new'
-
-  get 'users/create'
-
-  get 'users/edit'
-
-  get 'users/update'
-
-  get 'users/delete'
-
-  get 'users/destroy'
+  get 'users/show'
 
   get 'users/test'
 
-  root 'users#test'
+  get 'home/home'
+
+  root 'home#home'
+
+  post "/users/create" => "users#create", :as => "create"
 
   get 'login' => 'sessions#new'
   post 'login' => 'sessions#create'

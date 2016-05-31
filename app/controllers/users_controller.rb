@@ -18,7 +18,7 @@ class UsersController < ApplicationController
     @user.save
     if @user.save
       log_in @user
-      redirect_to @user
+      redirect_to user_path(@user)
     else
       render 'new'
     end
@@ -54,18 +54,16 @@ class UsersController < ApplicationController
   end
 
   def show
-    # current_user
-    # @user = User.find(current_user.id)
+    current_user
+    @user = User.find(current_user.id)
   end
 
   def index
-    @user = User.new
-    @users = User.all
   end
 
   private
 
   def user_params
-    params.require(:user).permit(:email, :password, :avatar)
+    params.require(:user).permit(:email, :password, :password_confirmation, :avatar)
   end
 end

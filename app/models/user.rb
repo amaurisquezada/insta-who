@@ -1,7 +1,7 @@
 class User < ActiveRecord::Base
 	has_secure_password
-	validates_confirmation_of :password
-	validates_presence_of :password, on: :create, length: { minimum: 6 }
+	validates_confirmation_of :password, on: :create, length: { minimum: 6 }
+	validates_presence_of :password
 	has_many :games
 
 	has_attached_file :avatar, :styles => {:medium => "300x300>", :thumb => "100x100>"}, :default_url => "/images/:style/missing.png"
