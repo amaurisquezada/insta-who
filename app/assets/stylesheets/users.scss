@@ -1,3 +1,10 @@
+body {
+	margin: 2px;
+	padding: 0;
+	height: 100vh;
+	width: 100vw;
+}
+
 #card-container {
 	perspective: 5000px;
 	width: 70%;
@@ -42,19 +49,22 @@
 	background: blue;
 	clear: both;
 	position: absolute;
-	top: 10px;
+	top: 18px;
 	right: 13%;
 }
 
 #keywords {
 	position: relative;
-	top: 29vh;
+	width: 25%;
+	left: 72%;
+	bottom: 64vh;
 }
 
 #input-field {
 	position: relative;
-	top: 25vh;
-	left: 8%;
+	width: 40vh;
+	left: 76%;
+	bottom: 65vh;
 }
 
 .guesses {
@@ -73,14 +83,14 @@
 	padding: 0;
 	margin: 0;
 	position: absolute;
-	top: 24vh;
+	top: 26vh;
 	right: 12%;
 }
 
 #you-win, #you-lose{
 	position: relative;
-	left: 8%;
-	top: 35vh;
+	left: 75%;
+	bottom: 55vh;
 	display: none;
 }
 
