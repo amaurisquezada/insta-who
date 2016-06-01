@@ -4,6 +4,7 @@ class SessionsController < ApplicationController
 
   def create
     @user = User.find_by_email(params[:email])
+
     if @user && @user.authenticate(params[:password])
       session[:user_id] = @user.id
       redirect_to user_path(@user), :notice => "Welcome back, #{@user.email}"
@@ -27,7 +28,7 @@ class SessionsController < ApplicationController
 
   def destroy
     session.clear
-    redirect_to users_path
+    redirect_to root_path
     flash[:alert] = "Bye Bye"
   end
 end

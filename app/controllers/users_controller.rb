@@ -31,7 +31,7 @@ class UsersController < ApplicationController
     User.where(id: params[:id]).each do |user|
         user.delete
       end
-    redirect_to users_path
+    redirect_to root_path
     flash[:alert] = "Your account has been destroyed"
   end
 
