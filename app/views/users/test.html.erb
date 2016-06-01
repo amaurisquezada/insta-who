@@ -1,7 +1,7 @@
 <% @mygame = Game.find(1) %>
 <% @mycard = @mygame.cards.sample %>
 <div id="card-container">
-	<% @mygame.cards.each do |student| %>
+	<% @mygame.cards.shuffle.each do |student| %>
 		<div class="one-card-container <%=student.name.gsub(" ", "-").downcase%>">
 			<div id=<%=student.name.gsub(" ", "-").downcase%> class="cards front"><%= student.name %></div>
 			<div class="back"></div>
@@ -25,7 +25,7 @@
 		$('#answer-submit').submit(function(){
 			<% @mygame.cards.each do |student| %>
 				<% @my_tags = student.tags.map(&:description) %>
-				check = $('#answer').val()
+				check = $('#answer').val().toLowerCase()
 				array = <%= raw @my_tags %>
 				myCardAttr = <%= raw @mycard.tags.map(&:description) %>
 				if (array.includes(check) === myCardAttr.includes(check)){
@@ -37,16 +37,20 @@
 			$('#guess' + counter).css('background', 'yellow')
 			counter += 1
 			if (counter > 5){
-				$('#answer').prop('disabled', true)
-				$('#answer-submit').prop('disabled', true)
+				disableInput()
 			} 
 		})
+		var winner = undefined;
 		<% @mygame.cards.each do |student| %>
 		$('#' + "<%=student.name.gsub(" ", "-").downcase%>").click(function(){
-			if($('#' + "<%=student.name.gsub(" ", "-").downcase%>").html() === "<%= @mycard.name %>"){
+			if($('#' + "<%=student.name.gsub(" ", "-").downcase%>").html() === "<%= @mycard.name %>" && winner === undefined){
 				$('#you-win').css('display', 'block')
+				disableInput()
+				winner = true
 			} else {
 				$('#you-lose').css('display', 'block')
+				disableInput()
+				winner = false
 			}
 		})
 		<% end %>
@@ -90,5 +94,11 @@
 		"grey hair"
 	</div>
 
-	<div id="you-win"><h1 id="result-win">YOU WIN!</h1></div>
-	<div id="you-lose"><h1 id="result-lose">YOU LOSE!</h1></div>
+	<div id="you-win">
+		<h1 id="result-win">YOU WIN!</h1>
+		<button class="play-again">Play Again?</button>
+	</div>
+	<div id="you-lose">
+		<h1 id="result-lose">YOU LOSE!</h1>
+		<button class="play-again">Play Again?</button>
+	</div>

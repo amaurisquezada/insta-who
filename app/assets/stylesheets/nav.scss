@@ -1,0 +1,42 @@
+$default-color: #000;
+$unit: 16px;
+
+
+.main-content-area{
+	display: inline-block;
+}
+
+#nav-toggle-button{
+	margin: 10px 15px 0px 0px;
+	width: 60px;
+	height: 60px;
+	float: right;
+}
+
+#main-nav-container{
+	width: 22%;
+	height: 18em;
+	margin-right: 15px;
+	display: inline-block;
+	float: right;
+	border: 2px solid $default-color;
+
+	ul{
+		list-style: none;
+		margin-top: 2em;
+	}
+
+	li{
+		font-size: $unit *2;
+		padding: 4px 0 4px 2px;
+	}
+
+	a, a:hover, a:active, a:visited{
+		text-decoration: none;
+		color: $default-color;		
+	}
+
+	li:nth-child(even){
+		background-color: #f2f2f2
+	}
+}
