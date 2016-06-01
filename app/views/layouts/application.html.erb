@@ -12,10 +12,16 @@
 	<% elsif flash[:alert] %>
 	<%= flash[:alert] %>
 	<% end %>
-
+	<header>
+		<button id="nav-toggle-button">
+			<%= image_tag "nav-menu-toggle" %>
+		</button>
+		<br clear="all" />
+	</header>
 	<div class="main-content-area">
 		<%= yield %>
 	</div>
+
 	<div id="main-nav-container">
 		<ul id="main-nav-list">
 			<% if @current_user %>
