@@ -1,7 +1,6 @@
 $default-color: #000;
 $unit: 16px;
 
-
 .main-content-area{
 	display: inline-block;
 }
@@ -10,15 +9,16 @@ $unit: 16px;
 	margin: 10px 15px 0px 0px;
 	width: 60px;
 	height: 60px;
-	float: right;
+	float: left;
 }
 
 #main-nav-container{
+	background: white;
 	width: 22%;
 	height: 18em;
 	margin-right: 15px;
 	display: inline-block;
-	float: right;
+	float: left;
 	border: 2px solid $default-color;
 
 	ul{

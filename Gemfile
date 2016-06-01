@@ -1,10 +1,16 @@
 source 'https://rubygems.org'
 
+# source 'https://rails-assets.org' do
+#   gem 'rails-assets-tether', '>= 1.1.0'
+# end
+
 group :development do
   gem "better_errors"
 end
 
 gem "binding_of_caller"
+
+# gem 'bootstrap', '~> 4.0.0.alpha3'
 
 gem "paperclip", "~> 4.2"
 

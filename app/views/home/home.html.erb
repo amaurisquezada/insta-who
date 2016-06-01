@@ -1,27 +1,22 @@
-<br>SIGN UP<br><br>
-<%= form_for @user, :url => create_path, :html => { :multipart => true } do |f| %>
-<%= f.label :email %>
-<%= f.text_field :email %>
-<%= f.label :password %>
-<%= f.password_field :password %>
-<%= f.label :password_confirmation %>
-<%= f.password_field :password_confirmation %>
-<%= f.label :avatar %>
-<%= f.file_field :avatar %>
-<%= f.submit :submit, data: {disable_with: "Submitting..."} %>
-<% end %>
-<hr>
-LOG IN
-<%= form_tag login_path do %>
-<%= label_tag :email %>
-<%= text_field_tag :email %>
-<%= label_tag :password %>
-<%= password_field_tag :password %>
-<%= submit_tag %>
-<% end %>
-<hr>
-<% if 1 %>
-<%= link_to "LOG OUT", logout_path, method: :delete %>
-<% else %>
-You are not logged in.
-<% end %>
+<button id="signup-toggle-button">
+	<h1>Insta Who</h1>
+</button>
+
+<div class="container">
+
+	<div id="sessionz">
+	SIGN UP<br><br>
+	<%= form_for @user, :url => create_path, :html => { :multipart => true } do |f| %>
+	<%= f.label :email %>
+	<%= f.text_field :email %><br>
+	<%= f.label :password %>
+	<%= f.password_field :password %><br>
+	<%= f.label :password_confirmation %>
+	<%= f.password_field :password_confirmation %><br>
+	<%= f.label :avatar %>
+	<%= f.file_field :avatar %><br><br>
+	<%= f.submit :submit, data: {disable_with: "Submitting..."} %>
+	<% end %><br>
+	</div>
+
+</div>
