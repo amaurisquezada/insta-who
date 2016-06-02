@@ -1,0 +1,41 @@
+		<% @mygame.cards.each do |student| %>
+			$('#' + "<%=student.name.gsub(" ", "-").downcase%>").off('click');
+		<% end %>
+
+		var counter = <%= @counter %>;
+		<% @mygame.cards.each do |student| %>
+			<% @my_tags = student.tags.map(&:description) %>
+			check = $('#answer').val().toLowerCase();
+			array = <%= raw @my_tags %>;
+			myCardAttr = <%= raw @mycard.tags.map(&:description) %>;
+			if (array.includes(check) === myCardAttr.includes(check)){
+					desc_match($('#' + "<%=student.name.gsub(" ", "-").downcase%>"));
+			}	else {
+					non_match($('.' + "<%=student.name.gsub(" ", "-").downcase%>"));
+				};
+		<% end %>
+
+		$('#answer').val('')
+		$('#guess' + counter).css('background', 'yellow')
+		counter += 1
+		if (counter > 5){
+			disableInput()
+		} 
+
+		var winner = undefined;
+		var winningCard = "<%= @mycard.name %>";
+		<% @mygame.cards.each do |student| %>
+			$('#' + "<%=student.name.gsub(" ", "-").downcase%>").click(function(){
+				if($('#' + "<%=student.name.gsub(" ", "-").downcase%>").html() === winningCard && winner === undefined){
+					$('#you-win').css('display', 'block');
+					disableInput();
+					winner = true;
+				} else {
+						alert($('#' + "<%=student.name.gsub(" ", "-").downcase%>").html() + "-CLICKED DIV")
+						alert(winningCard + "-MYSTERY DIV")
+						$('#you-lose').css('display', 'block');
+						disableInput();
+						winner = false;
+					};
+			});
+		<% end %>
