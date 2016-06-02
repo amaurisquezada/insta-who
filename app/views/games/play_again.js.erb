@@ -20,6 +20,5 @@
 		$('.selected').removeAttr('id');
 		$('.selected').attr('id', newMysteryId);
 		$('.selected').html(newMysteryId.substr(0,1).toUpperCase()+newMysteryId.substr(1).replace(/\-/g,' '));
-  	$('#answer').prop('disabled', false);
-		$('#answer-submit').prop('disabled', false);
+  	$('#keywords .button_to input').prop('disabled', false);
 		winner = undefined;

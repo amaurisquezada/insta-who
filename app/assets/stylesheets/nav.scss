@@ -5,6 +5,15 @@ $unit: 16px;
 	display: inline-block;
 }
 
+#nav-wrapper {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 90vh;
+	width: 65px;
+	margin-right: 20px;
+}
+
 #nav-toggle-button{
 	margin: 10px 15px 0px 0px;
 	width: 60px;
@@ -17,9 +26,13 @@ $unit: 16px;
 	width: 22%;
 	height: 18em;
 	margin-right: 15px;
+	position: absolute;
 	display: inline-block;
 	float: left;
 	border: 2px solid $default-color;
+	z-index: 1000;
+	background-color: white;
+	top: 70px;
 
 	ul{
 		list-style: none;

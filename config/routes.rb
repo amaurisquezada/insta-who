@@ -1,4 +1,18 @@
 Rails.application.routes.draw do
+  get 'tags/new'
+
+  get 'tags/create'
+
+  get 'tags/destroy'
+
+  get 'card/new'
+
+  get 'card/create'
+
+  get 'card/index'
+
+  get 'card/show'
+
   get 'games/new'
 
   get 'games/create'

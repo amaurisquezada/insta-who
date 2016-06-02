@@ -1,10 +1,12 @@
-	<div id="card-container">
-		<% @mygame.cards.shuffle.each do |student| %>
-			<div class="one-card-container <%=student.name.gsub(" ", "-").downcase%>">
-				<div id=<%=student.name.gsub(" ", "-").downcase%> class="cards front"><%= student.name %></div>
-				<div class="back"></div>
-			</div>
-		<% end %>
+	<div id="game-wrapper">
+		<div id="card-container">
+			<% @mygame.cards.shuffle.each do |student| %>
+				<div class="one-card-container <%=student.name.gsub(" ", "-").downcase%>">
+					<div id=<%=student.name.gsub(" ", "-").downcase%> class="cards front"><%= student.name %></div>
+					<div class="back"></div>
+				</div>
+			<% end %>
+		</div>
 	</div>
 	<div id=<%=@mycard.name.gsub(" ", "-").downcase%> class="selected"><%= @mycard.name %></div>
 	<div id="all-guesses">
@@ -13,52 +15,11 @@
 		<div class="guesses" id="guess3"></div>
 		<div class="guesses" id="guess4"></div>
 		<div class="guesses" id="guess5"></div>
-	</div>
-	<div id="input-field">
-		<%= form_tag(update_card_position_path, method: 'post', remote: true ) do %>
-	  	<%= label_tag(:answer, 'Guess Attribute:') %>
-	  	<%= text_field_tag(:answer) %>
-  	<%= submit_tag("Submit", id: 'answer-submit') %>
-
-<% end %>
-	</div>
-	
+	</div>	
 	<div id="keywords">
-		"dark hair"
-		"red hair"
-		"blonde hair"
-		"bald"
-		"long hair"
-		"medium hair"
-		"short hair"
-		"beard"
-		"mustache"
-		"clean shaven"
-		"dark eyes"
-		"green eyes"
-		"blue eyes"
-		"colored contacts"
-		"dark skin"
-		"brown skin"
-		"light skin"
-		"has glasses"
-		"no glasses"
-		"male"
-		"female"
-		"is tall"
-		"is short"
-		"pc computer"
-		"mac computer"
-		"younger than 30"
-		"older than 30"
-		"native new yorker"
-		"single"
-		"married"
-		"likes pepperoni pizza"
-		"likes cheese pizza"
-		"has earrings"
-		"does not have earrings"
-		"grey hair"
+		<% @available_tags.each do |tag| %>
+			<%= button_to tag,  {controller: "games", action: "update_card_position", selection: tag}, method: 'post', remote: true %>
+		<% end %>
 	</div>
 
 	<div id="you-win">
