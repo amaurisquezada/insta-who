@@ -9,7 +9,6 @@
 			array = <%= raw @my_tags %>;
 			myCardAttr = <%= raw @mycard.tags.map(&:description) %>;
 			if (array.includes(check) === myCardAttr.includes(check)){
-					desc_match($('#' + "<%=student.name.gsub(" ", "-").downcase%>"));
 			}	else {
 					non_match($('.' + "<%=student.name.gsub(" ", "-").downcase%>"));
 				};
