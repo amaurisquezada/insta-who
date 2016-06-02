@@ -8,6 +8,7 @@ class GamesController < ApplicationController
   def show
   	@mygame = Game.find(1)
   	@mycard = @mygame.cards.sample
+  	MysteryCard.where(user_id: 1, game_id: @mygame.id).destroy_all
   	MysteryCard.create(user_id: 1, game_id: @mygame.id, card_name: @mycard.name, counter: 0)
   end
 

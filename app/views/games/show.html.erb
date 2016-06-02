@@ -1,11 +1,11 @@
-<div id="card-container">
-	<% @mygame.cards.shuffle.each do |student| %>
-		<div class="one-card-container <%=student.name.gsub(" ", "-").downcase%>">
-			<div id=<%=student.name.gsub(" ", "-").downcase%> class="cards front"><%= student.name %></div>
-			<div class="back"></div>
-		</div>
-	<% end %>
-</div>
+	<div id="card-container">
+		<% @mygame.cards.shuffle.each do |student| %>
+			<div class="one-card-container <%=student.name.gsub(" ", "-").downcase%>">
+				<div id=<%=student.name.gsub(" ", "-").downcase%> class="cards front"><%= student.name %></div>
+				<div class="back"></div>
+			</div>
+		<% end %>
+	</div>
 	<div id=<%=@mycard.name.gsub(" ", "-").downcase%> class="selected"><%= @mycard.name %></div>
 	<div id="all-guesses">
 		<div class="guesses" id="guess1"></div>
@@ -16,8 +16,8 @@
 	</div>
 	<div id="input-field">
 		<%= form_tag(update_card_position_path, method: 'post', remote: true ) do %>
-  	<%= label_tag(:answer, 'Guess Attribute:') %>
-  	<%= text_field_tag(:answer) %>
+	  	<%= label_tag(:answer, 'Guess Attribute:') %>
+	  	<%= text_field_tag(:answer) %>
   	<%= submit_tag("Submit", id: 'answer-submit') %>
 
 <% end %>

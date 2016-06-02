@@ -1,76 +1,41 @@
-			
-			<% @mygame.cards.each do |student| %>
-				$('#' + "<%=student.name.gsub(" ", "-").downcase%>").off('click')
-				<% end %>
-			
+		<% @mygame.cards.each do |student| %>
+			$('#' + "<%=student.name.gsub(" ", "-").downcase%>").off('click');
+		<% end %>
 
+		var counter = <%= @counter %>;
+		<% @mygame.cards.each do |student| %>
+			<% @my_tags = student.tags.map(&:description) %>
+			check = $('#answer').val().toLowerCase();
+			array = <%= raw @my_tags %>;
+			myCardAttr = <%= raw @mycard.tags.map(&:description) %>;
+			if (array.includes(check) === myCardAttr.includes(check)){
+					desc_match($('#' + "<%=student.name.gsub(" ", "-").downcase%>"));
+			}	else {
+					non_match($('.' + "<%=student.name.gsub(" ", "-").downcase%>"));
+				};
+		<% end %>
 
-			var counter = <%= @counter %>
-			<% @mygame.cards.each do |student| %>
-				<% @my_tags = student.tags.map(&:description) %>
-				check = $('#answer').val().toLowerCase()
-				array = <%= raw @my_tags %>
-				myCardAttr = <%= raw @mycard.tags.map(&:description) %>
-				if (array.includes(check) === myCardAttr.includes(check)){
-						desc_match($('#' + "<%=student.name.gsub(" ", "-").downcase%>"))
-				}	else {
-						non_match($('.' + "<%=student.name.gsub(" ", "-").downcase%>"))
-					}	
-			<% end %>
-			$('#answer').val('')
-			$('#guess' + counter).css('background', 'yellow')
-			counter += 1
-			if (counter > 5){
-				disableInput()
-			} 
-
-
-
-
- //  	$.fn.randomize = function(selector){
-	//     var $elems = selector ? $(this).find(selector) : $(this).children(),
-	//         $parents = $elems.parent();
-
-	//     $parents.each(function(){
-	//         $(this).children(selector).sort(function(){
-	//             return Math.round(Math.random()) - 0.5;
-	//         // }). remove().appendTo(this); // 2014-05-24: Removed `random` but leaving for reference. See notes under 'ANOTHER EDIT'
-	//         }).detach().appendTo(this);
-	//     });
-
-	//     return this;
-	// };
-
- //  $('.play-again').click(function(){
- //  	$('.one-card-container').css('transform', 'rotateX(0deg)');
- //  	$('.front').css('background', 'grey')
- //  	$('#you-win').css('display', 'none')
- //  	$('#you-lose').css('display', 'none')
-	// 	$('.guesses').css('background', 'white')
-	// 	$('#card-container').randomize($('.one-card-container'))
-	// 	var random = Math.floor(Math.random()*24);
-	// 	newMysteryId = $(".one-card-container").eq(random).first().attr('class').split(' ')[1]
-	// 	$('.selected').removeAttr('id')
-	// 	$('.selected').attr('id', newMysteryId)
-	// 	$('.selected').html(newMysteryId.substr(0,1).toUpperCase()+newMysteryId.substr(1).replace(/\-/g,' '))
- //  	$('#answer').prop('disabled', false);
-	// 	$('#answer-submit').prop('disabled', false);
-	// 	counter = 1
-	// 	winner = undefined
- //  })
+		$('#answer').val('')
+		$('#guess' + counter).css('background', 'yellow')
+		counter += 1
+		if (counter > 5){
+			disableInput()
+		} 
 
 		var winner = undefined;
-		var winningCard = "<%= @mycard.name %>"
+		var winningCard = "<%= @mycard.name %>";
 		<% @mygame.cards.each do |student| %>
-		$('#' + "<%=student.name.gsub(" ", "-").downcase%>").click(function(){
-			if($('#' + "<%=student.name.gsub(" ", "-").downcase%>").html() === winningCard && winner === undefined){
-				$('#you-win').css('display', 'block')
-				disableInput()
-				winner = true
-			} else {
-				$('#you-lose').css('display', 'block')
-				disableInput()
-				winner = false
-			}
-		})
+			$('#' + "<%=student.name.gsub(" ", "-").downcase%>").click(function(){
+				if($('#' + "<%=student.name.gsub(" ", "-").downcase%>").html() === winningCard && winner === undefined){
+					$('#you-win').css('display', 'block');
+					disableInput();
+					winner = true;
+				} else {
+						alert($('#' + "<%=student.name.gsub(" ", "-").downcase%>").html() + "-CLICKED DIV")
+						alert(winningCard + "-MYSTERY DIV")
+						$('#you-lose').css('display', 'block');
+						disableInput();
+						winner = false;
+					};
+			});
 		<% end %>
