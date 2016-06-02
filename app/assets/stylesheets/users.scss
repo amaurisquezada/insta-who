@@ -1,4 +1,7 @@
+
 body {
+	/*background: lightgray;*/
+	background-size: cover;
 	margin: 2px;
 	padding: 0;
 	height: 100vh;
@@ -7,30 +10,27 @@ body {
 
 #card-container {
 	perspective: 5000px;
-	width: 90%;
+	width: 70%;
 }
-
 
 .one-card-container {
 	position: relative;
-	height: 25vh;
-	width: 25vh;
+	height: 10vw;
+	width: 10vw;
 	margin: 10px 10px 0 0;
 	float: left;
 	transition: all 0.6s ease;
 	transform-style: preserve-3d;
 }
 
-
 .front, .back {
-	height: 25vh;
-	width: 25vh;
+	height: 10vw;
+	width: 10vw;
 	position: absolute;
 	top: 0;
 	left: 0;
 	backface-visibility: hidden;
 	border-radius: 4px;
-	font-size: 20px;
 }
 
 .front {
@@ -40,18 +40,18 @@ body {
 
 .back {
 	background: url(question-mark.png);
-	background-size: 25vh 25vh;
+	background-size: 10vw 10vw;
 	background-position: center center;
 	transform: rotateX(-180deg);
 }
 
 .selected {
-	height: 25vh;
-	width: 25vh;
+	height: 10vw;
+	width: 10vw;
 	background: blue;
 	clear: both;
 	position: absolute;
-	top: 5%;
+	top: 18px;
 	right: 13%;
 }
 
@@ -80,21 +80,20 @@ body {
 }
 
 #all-guesses {
-	width :28vh;
+	width :10vw;
 	height: 12px;
 	padding: 0;
 	margin: 0;
 	position: absolute;
-	top: 28vh;
+	top: 26vh;
 	right: 12%;
 }
 
 #you-win, #you-lose{
-	display: none;
 	position: relative;
-	margin-top: 76vh;
-	left: 15px;
-
+	bottom: 15vh;
+	left: 3vw;
+	display: none;
 }
 
 #result-win, #result-lose {
@@ -107,14 +106,4 @@ body {
 
 #result-lose {
 	color: red;
-}
-
-#keywords .button_to {
-	float: left;
-	margin-right: 5px;
-	margin-bottom: 5px;
-}
-
-#game-wrapper {
-	margin-left: 65px;
 }
