@@ -5,7 +5,7 @@
 		var counter = <%= @counter %>;
 		<% @mygame.cards.each do |student| %>
 			<% @my_tags = student.tags.map(&:description) %>
-			check = "<%= @selection %>"
+			check = "<%= raw @selection %>"
 			array = <%= raw @my_tags %>;
 			myCardAttr = <%= raw @mycard.tags.map(&:description) %>;
 			if (array.includes(check) === myCardAttr.includes(check)){
