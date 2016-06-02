@@ -1,4 +1,12 @@
 Rails.application.routes.draw do
+  get 'games/new'
+
+  get 'games/create'
+
+  get 'games/show'
+
+  get 'games/update_card_position'
+
   get 'home/home'
 
   get 'users/new'
@@ -23,11 +31,14 @@ Rails.application.routes.draw do
 
   post "/users/create" => "users#create", :as => "create"
 
+  post "/games/update_card_position" => "games#update_card_position", :as => "update_card_position"
+  post "/games/play_again" => "games#play_again", :as => "play_again"
+
   get 'login' => 'sessions#new'
   post 'login' => 'sessions#create'
   delete 'logout' => 'sessions#destroy'
 
-  resources :users
+  resources :users, :games
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
