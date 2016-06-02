@@ -27,7 +27,7 @@
 			<% if @current_user %>
 				<li><%= link_to "New Game", root_path(:anchor => '#') %></li>
 				<li><%= link_to "My Games", root_path(:anchor => '#') %></li>
-				<li><%= link_to "Edit Profile", users_edit_path %></li>
+				<li><%= link_to "My Profile", user_path %></li>
 				<li><%= link_to "Log Out", logout_path, method: :delete %></li>
 			<% else %>
 				<li><%= link_to "Sign In/ Sign Up", root_path %></li>
