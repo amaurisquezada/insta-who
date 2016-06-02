@@ -3,4 +3,5 @@ class HomeController < ApplicationController
   	@user = User.new
     @users = User.all
   end
+
 end
