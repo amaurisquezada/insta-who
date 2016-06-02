@@ -41,6 +41,10 @@ Rails.application.routes.draw do
 
   get 'home/home'
 
+  get 'home/show'
+
+  # get '/' => 'home#index'
+
   root 'home#home'
 
   post "/users/create" => "users#create", :as => "create"

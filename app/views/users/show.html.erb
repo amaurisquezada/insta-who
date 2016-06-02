@@ -1,54 +1,104 @@
-<br>
-<%= image_tag @user.avatar.url(:medium) %>
-<%= @user.email %>
-<br />
-<%= link_to "Edit Profile", edit_user_path %>
-<br />
-<%= link_to "DELETE USER", user_path(@user), method: :delete %>
-<br />
-<br />
-<%= form_tag card_create_path, multipart: true do %>
+<div id="user-show-container">
+	<div class="user-info-container">
+		<div class="user-image">
+			<%= image_tag @user.avatar.url(:medium) %>
+			<br />
+			<br />
+		</div>
+		<div class="user-links">				
+			<h2><%= @user.email %></h2>
+			<br />
+			<%= link_to "Edit Profile", edit_user_path, class: "user-show-def-font" %>
+			<br />
+			<br />
+			<%= link_to "DELETE USER", user_path(@user), method: :delete %>
+			<br />
+			<br />
+			<button class="play-game-button">PLAY GAME!
+			</button>
+		</div>
+		<br clear="all" />
+		<br />
+		<br />
+	</div>
+	<div class="new-card-form-container">
+		<div class="avatar-upload-field">
+			<h2>Create a New Card!</h2>
+			<br />
+			<%= form_tag card_create_path, multipart: true do %>
+			<div>
+				<h2><%= label_tag "Name:" %></h2>
+				<%= text_field_tag :name %>
+			</div>
+			<br />
+			<div>
+				<h2><%= label_tag "Avatar:" %></h2>
+				<%= file_field_tag 'cards[avatar]' %>
+			</div>
+			<br />
+			<h3>Create Your Own Tag!</h3>
+		<%= form_tag tags_create_path, multipart: true do %>
+			<br />
+			<%= label_tag "Tag" %>
+			<%= text_field_tag :description %>
+			<br />
+			<%= submit_tag :create, data:{disable_with: "Creating..."} %>
 
-	<%= label_tag :name %>
-	<%= text_field_tag :name %>
+		<% end %>
+		</div>
+		<div class="attributes-area">
+			<h2>Attributes:<h3>(Please select from drop down options)</h3></h2>
+			<br />
+			<div class="drop-down-container">
+				<h3>Gender</h3>
+				<%= select_tag(:first, options_for_select([ ["Male", 40], ["Female", 41] ]), {class: "drop-down"}) %>
+			</div>
+			<div class="drop-down-container">
+				<h3>Hair Color</h3>
+				<%= select_tag(:second, options_for_select([["Black", 3], ["Brown", 4], ["Blonde", 5], ["Red", 6], ["White", 7], ["Dyed", 8], ["Bald", 9] ]),{class: "drop-down"})%>
+				</div>
+			<div class="drop-down-container">
+				<h3>Hair Length</h3>
+				<%= select_tag(:third, options_for_select([ ["Short", 10], ["Medium", 11], ["Long", 12]  ]), {class: "drop-down"}) %>
+			</div>
+			<div class="drop-down-container">
+				<h3>Facial Hair</h3>
+				<%= select_tag(:fourth, options_for_select([ ["Beard", 13], ["None", 14], ["Mustache", 15] ]), {class: "drop-down"}) %>
+			</div>
+			<div class="drop-down-container">
+				<h3>Eye Color</h3>
+				<%= select_tag(:fifth, options_for_select([ ["Black", 16], ["Brown", 17], ["Blue", 18], ["Green", 19], ["Other", 20] ]), {class: "drop-down"}) %>
+			</div>
+			<div class="drop-down-container">
+				<h3>Skin Tone</h3>
+				<%= select_tag(:sixth, options_for_select([ ["Light", 22], ["Dark", 23] ]), {class: "drop-down"}) %>
+			</div>
+			<div class="drop-down-container">
+				<h3>Glasses</h3>
+				<%= select_tag(:seventh, options_for_select([ ["Yes", 23], ["No", 24] ]), {class: "drop-down"}) %>
+			</div>
+			<div class="drop-down-container">
+				<h3>Height</h3>
+				<%= select_tag(:eighth, options_for_select([["Above 5'7", 25], ["Below 5'7", 26], ["Kassims' Height", 27] ]), {class: "drop-down"}) %>
+			</div>
+			<div class="drop-down-container">
+				<h3>Relationship</h3>
+				<%= select_tag(:ninth, options_for_select([ ["Married", 32], ["In a Relationship", 33], ["Single", 34] ]), {class: "drop-down"}) %>
+			</div>
+			<div class="drop-down-container">
+				<h3>Random</h3>
+				<%= select_tag(:tenth, options_for_select([ ["Mac User", 29], ["PC User", 28], ["Younger than 30", 30], ["Native New Yorker", 31], ["Prefers Cheese Pizza", 35], ["Prefers Pepperoni Pizza", 36], ["Wears Earings"], ["Has Gauges"], ["Has Tattoos", 39] ]), {class: "drop-down"}) %>
+			</div>
+			<div class="new-card-submit">
+				<%= submit_tag :submit, data: {disable_with: "Submitting..."} %>
+			</div>
+			<br clear="all" />
 
-	<%= label_tag :avatar %>
-	<%= file_field_tag 'cards[avatar]' %>
-	<br />
-
-	<h3>Gender</h3>
-		<%= select_tag(:first, options_for_select([ ["Male", 40], ["Female", 41] ])) %>
-	<h3>Hair Color</h3>
-		<%= select_tag(:second, options_for_select([["Black", 3], ["Brown", 4], ["Blonde", 5], ["Red", 6], ["White", 7], ["Dyed", 8], ["Bald", 9] ])) %>
-	<br />
-	<h3>Hair Length</h3>
-		<%= select_tag(:third, options_for_select([ ["Short", 10], ["Medium", 11], ["Long", 12]  ])) %>
-	<h3>Facial Hair</h3>
-	<%= select_tag(:fourth, options_for_select([ ["Beard", 13], ["None", 14], ["Mustache", 15] ])) %>
-	<h3>Eye Color</h3>
-		<%= select_tag(:fifth, options_for_select([ ["Black", 16], ["Brown", 17], ["Blue", 18], ["Green", 19], ["Other", 20] ])) %>
-	<h3>Skin Tone</h3>
-		<%= select_tag(:sixth, options_for_select([ ["Light", 22], ["Dark", 23] ])) %>
-	<h3>Glasses</h3>
-		<%= select_tag(:seventh, options_for_select([ ["Yes", 23], ["No", 24] ])) %>
-	<h3>Height</h3>
-		<%= select_tag(:eighth, options_for_select([["Above 5'7", 25], ["Below 5'7", 26], ["Kassims' Height", 27] ])) %>
-	<h3>Relationship</h3>
-		<%= select_tag(:ninth, options_for_select([ ["Married", 32], ["In a Relationship", 33], ["Single", 34] ])) %>
-	<h3>Random</h3>
-		<%= select_tag(:tenth, options_for_select([ ["Mac User", 29], ["PC User", 28], ["Younger than 30", 30], ["Native New Yorker", 31], ["Prefers Cheese Pizza", 35], ["Prefers Pepperoni Pizza", 36], ["Wears Earings"], ["Has Gauges"], ["Has Tattoos", 39] ])) %>
-
-		<%= submit_tag :submit, data: {disable_with: "Submitting..."} %>
-
-<% end %>
-<br />
-<h3>Create Your Own Tag!</h3>
-<!-- this form should create a new tag -->
-<%= form_tag tags_create_path, multipart: true do %>
-	
-	<%= label_tag "Tag" %>
-	<%= text_field_tag :description %>
-
-	<%= submit_tag :create, data:{disable_with: "Creating..."} %>
-
-<% end %>
+			<% end %>
+		
+		</div>
+		<br />
+		<br />
+		<!-- (Testing) this form should create a new tag -->
+	</div>
+</div>

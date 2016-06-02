@@ -1,5 +1,7 @@
 class UsersController < ApplicationController
 
+  before_filter :authorize
+
   # before_action :logged_in_user, only: [:edit, :update]
 
   # def logged_in_user

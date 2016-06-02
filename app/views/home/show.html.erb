@@ -1,0 +1,14 @@
+LOG IN
+<%= form_tag login_path do %>
+<%= label_tag :email %>
+<%= text_field_tag :email %><br><br>
+<%= label_tag :password %>
+<%= password_field_tag :password %><br><br>
+<%= submit_tag %>
+<% end %>
+<hr>
+<% if 1 %>
+<%= link_to "LOG OUT", logout_path, method: :delete %>
+<% else %>
+You are not logged in.
+<% end %>
