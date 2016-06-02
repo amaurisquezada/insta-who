@@ -1,3 +1,7 @@
-<%= image_tag @user.avatar.url(:medium) %>
-<%= @user.email %>
-<%= link_to "DELETE USER", user_path(@user), method: :delete %>
+
+
+<div class="showcontainer">
+	<%= image_tag @user.avatar.url(:medium) %>
+	<%= @user.email %>
+	<%= link_to "DELETE USER", user_path(@user), method: :delete %>
+</div>
