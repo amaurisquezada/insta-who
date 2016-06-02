@@ -12,14 +12,13 @@
 	<% elsif flash[:alert] %>
 	<%= flash[:alert] %>
 	<% end %>
-	<header>
+	<div id="nav-wrapper">
 		<button id="nav-toggle-button">
 			<%= image_tag "nav-menu-toggle" %>
 		</button>
 		<br clear="all" />
-	</header>
+	</div>
 	<div class="main-content-area">
-		<%= yield %>
 	</div>
 
 	<div id="main-nav-container">
@@ -35,5 +34,6 @@
 		</ul>
 	</div>
 	<br clear="all" />
+		<%= yield %>
 </body>
 </html>
