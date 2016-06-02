@@ -1,13 +1,7 @@
-<br>
-<%= image_tag @user.avatar.url(:medium) %>
-<%= @user.email %>
-<br />
-<%= link_to "Edit Profile", edit_user_path %>
-<br />
-<%= link_to "DELETE USER", user_path(@user), method: :delete %>
-<br />
-<br />
-<%= form_tag card_create_path, multipart: true do %>
+<h1>Card#new</h1>
+<p>Find me in app/views/card/new.html.erb</p>
+
+<%= form_tag cards_create_path, multipart: true do %>
 
 	<%= label_tag :name %>
 	<%= text_field_tag :name %>
@@ -39,16 +33,5 @@
 		<%= select_tag(:tenth, options_for_select([ ["Mac User", 29], ["PC User", 28], ["Younger than 30", 30], ["Native New Yorker", 31], ["Prefers Cheese Pizza", 35], ["Prefers Pepperoni Pizza", 36], ["Wears Earings"], ["Has Gauges"], ["Has Tattoos", 39] ])) %>
 
 		<%= submit_tag :submit, data: {disable_with: "Submitting..."} %>
-
-<% end %>
-<br />
-<h3>Create Your Own Tag!</h3>
-<!-- this form should create a new tag -->
-<%= form_tag tags_create_path, multipart: true do %>
-	
-	<%= label_tag "Tag" %>
-	<%= text_field_tag :description %>
-
-	<%= submit_tag :create, data:{disable_with: "Creating..."} %>
 
 <% end %>
