@@ -9,7 +9,7 @@ class GamesController < ApplicationController
   end
 
   def show
-  	@mygame = Game.find(7)
+  	@mygame = Game.find(1)
   	@mycard = @mygame.cards.sample
     @myuser = User.where(username: "aq").first
   	MysteryCard.where(user_id: @myuser.id, game_id: @mygame.id).destroy_all
@@ -18,7 +18,7 @@ class GamesController < ApplicationController
   end
 
   def update_card_position
-  	@mygame = Game.find(7)
+  	@mygame = Game.find(1)
     @myuser = User.where(username: "aq").first
   	@mysterycard = MysteryCard.where(user_id: @myuser.id, game_id: @mygame.id).last
   	@mysterycard.update(counter: @mysterycard.counter+1)
@@ -32,7 +32,7 @@ class GamesController < ApplicationController
   end
 
   def play_again  	
-  	@mygame = Game.find(7)
+  	@mygame = Game.find(1)
     @myuser = User.where(username: "aq").first
   	MysteryCard.where(user_id: @myuser.id, game_id: @mygame.id).last.destroy
   	@mycard = @mygame.cards.sample

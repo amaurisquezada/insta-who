@@ -47,17 +47,13 @@ class CardsController < ApplicationController
   end
 
   def edit
-    @card = Card.where(:name == params[:name]).last
+    @card = Card.find(params[:id])
     @tag = @card.tags
   end
 
   def update
-    @card = Card.where(:name == params[:name]).last
-    tag = Tag.new(:description == params[:description])
-    tag.save
-    @card.tags << tag
-
-    redirect_to card_show_path
+    @card = Card.update(params[:id], card_params)
+    redirect_to cards_show_path
   end
 
   def destroy
@@ -65,8 +61,8 @@ class CardsController < ApplicationController
 
   private
 
-  # def card_params
-  #   params.require(:card).permit(:name, :avatar, :tag_ids)
+  def card_params
+    params.require(:card).permit(:name, :avatar)
 
-  # end
+  end
 end

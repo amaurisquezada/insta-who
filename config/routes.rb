@@ -5,13 +5,13 @@ Rails.application.routes.draw do
 
   get 'tags/destroy'
 
-  get 'card/new'
+  get 'cards/new'
 
-  get 'card/create'
+  get 'cards/create'
 
-  get 'card/index'
+  get 'cards/index'
 
-  get 'card/show'
+  get 'cards/show'
 
   get 'games/new'
 
@@ -56,7 +56,7 @@ Rails.application.routes.draw do
   post 'login' => 'sessions#create'
   delete 'logout' => 'sessions#destroy'
 
-  resources :users, :games
+  resources :users, :games, :cards
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
