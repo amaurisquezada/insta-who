@@ -1,30 +1,128 @@
 User.create(email: "iwork@google.com", username: "aq", password: "12345", password_confirmation: "12345")
 User.where(username: "aq").first.games.create(name: "my_first_game")
 Game.where(name: "my_first_game").first.cards.create([
-	{name: "Amauris", avatar: File.new("app/assets/images/1.jpg")},
-	{name: "Donovan", avatar: File.new("app/assets/images/2.jpg")},
-	{name: "Chris", avatar: File.new("app/assets/images/3.jpg")},
-	{name: "Jerry", avatar: File.new("app/assets/images/4.jpg")},
-	{name: "Kim", avatar: File.new("app/assets/images/5.jpg")},
-	{name: "Ohad", avatar: File.new("app/assets/images/6.jpg")},
-	{name: "Quinn", avatar: File.new("app/assets/images/7.jpg")},
-	{name: "Kirsten", avatar: File.new("app/assets/images/8.jpg")},
-	{name: "Alex", avatar: File.new("app/assets/images/9.jpg")},
-	{name: "Mandisa", avatar: File.new("app/assets/images/10.jpg")},
-	{name: "Juan", avatar: File.new("app/assets/images/11.jpg")},
-	{name: "Kassim", avatar: File.new("app/assets/images/12.jpg")},
-	{name: "Jay", avatar: File.new("app/assets/images/13.jpg")},
-	{name: "Rick", avatar: File.new("app/assets/images/14.jpg")},
-	{name: "Bill", avatar: File.new("app/assets/images/15.jpg")},
-	{name: "Matt E", avatar: File.new("app/assets/images/16.jpg")},
-	{name: "Sanja", avatar: File.new("app/assets/images/17.jpg")},
-	{name: "Matt S", avatar: File.new("app/assets/images/18.jpg")},
-	{name: "Amzad", avatar: File.new("app/assets/images/19.jpg")},
-	{name: "Greg", avatar: File.new("app/assets/images/20.jpg")},
-	{name: "Sam", avatar: File.new("app/assets/images/21.jpg")},
-	{name: "Liana", avatar: File.new("app/assets/images/22.jpg")},
-	{name: "Andy", avatar: File.new("app/assets/images/23.jpg")},
-	{name: "Niall", avatar: File.new("app/assets/images/24.jpg")}])
+	{name: "Amauris"},
+	{name: "Donovan"},
+	{name: "Chris"},
+	{name: "Jerry"},
+	{name: "Kim"},
+	{name: "Ohad"},
+	{name: "Quinn"},
+	{name: "Kirsten"},
+	{name: "Alex"},
+	{name: "Mandisa"},
+	{name: "Juan"},
+	{name: "Kassim"},
+	{name: "Jay"},
+	{name: "Rick"},
+	{name: "Bill"},
+	{name: "Matt E"},
+	{name: "Sanja"},
+	{name: "Matt S"},
+	{name: "Amzad"},
+	{name: "Greg"},
+	{name: "Sam"},
+	{name: "Liana"},
+	{name: "Andy"},
+	{name: "Niall"}])
+
+
+	amauris = Card.where(name: "Amauris")
+	amauris.avatar = File.open("app/assets/images/1.jpg")
+	amauris.save!
+
+	donovan = Card.where(name: "Donovan")
+	donovan.avatar = File.open("app/assets/images/2.jpg")
+	donovan.save!
+
+	chris = Card.where(name: "Chris")
+	chris.avatar = File.open("app/assets/images/3.jpg")
+	chris.save!
+
+	jerry = Card.where(name: "Jerry")
+	jerry.avatar = File.open("app/assets/images/4.jpg")
+	jerry.save!
+
+	kim = Card.where(name: "Kim")
+	kim.avatar = File.open("app/assets/images/5.jpg")
+	kim.save!
+
+	ohad = Card.where(name: "Ohad")
+	ohad.avatar = File.open("app/assets/images/6.jpg")
+	ohad.save!
+
+	quinn = Card.where(name: "Quinn")
+	quinn.avatar = File.open("app/assets/images/7.jpg")
+	quinn.save!
+
+	kirsten = Card.where(name: "Kirsten")
+	kirsten.avatar = File.open("app/assets/images/8.jpg")
+	kirsten.save!
+
+	alex = Card.where(name: "Alex")
+	alex.avatar = File.open("app/assets/images/9.jpg")
+	alex.save!
+
+	mandisa = Card.where(name: "Mandisa")
+	mandisa.avatar = File.open("app/assets/images/10.jpg")
+	mandisa.save!
+
+	juan = Card.where(name: "Juan")
+	juan.avatar = File.open("app/assets/images/11.jpg")
+	juan.save!
+
+	kassim = Card.where(name: "Kassim")
+	kassim.avatar = File.open("app/assets/images/12.jpg")
+	kassim.save!
+
+	jay = Card.where(name: "Jay")
+	jay.avatar = File.open("app/assets/images/13.jpg")
+	jay.save!
+
+	rick = Card.where(name: "Rick")
+	rick.avatar = File.open("app/assets/images/14.jpg")
+	rick.save!
+
+	bill = Card.where(name: "Bill")
+	bill.avatar = File.open("app/assets/images/15.jpg")
+	bill.save!
+
+	matt_e = Card.where(name: "Matt E")
+	matt_e.avatar = File.open("app/assets/images/16.jpg")
+	matt_e.save!
+
+	sanja = Card.where(name: "Sanja")
+	sanja.avatar = File.open("app/assets/images/17.jpg")
+	sanja.save!
+
+	matt_s = Card.where(name: "Matt S")
+	matt_s.avatar = File.open("app/assets/images/18.jpg")
+	matt_s.save!
+
+	amzad = Card.where(name: "Amzad")
+	amzad.avatar = File.open("app/assets/images/19.jpg")
+	amzad.save!
+
+	greg = Card.where(name: "Greg")
+	greg.avatar = File.open("app/assets/images/20.jpg")
+	greg.save!
+
+	sam = Card.where(name: "Sam")
+	sam.avatar = File.open("app/assets/images/21.jpg")
+	sam.save!
+
+	liana = Card.where(name: "Liana")
+	liana.avatar = File.open("app/assets/images/22.jpg")
+	liana.save!
+
+	andy = Card.where(name: "Andy")
+	andy.avatar = File.open("app/assets/images/23.jpg")
+	andy.save!
+
+	niall = Card.where(name: "Niall")
+	niall.avatar = File.open("app/assets/images/24.jpg")
+	niall.save!
+
 
 Tag.create([
 	{description:"brown hair"},
