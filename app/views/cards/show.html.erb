@@ -14,7 +14,7 @@
 	<% end %>
 
 	<h3>Add your own tag!</h3>
-	<%= form_tag tag_create_path, multipart: true do %>
+	<%= form_tag tags_create_path, multipart: true do %>
 		
 		<%= label_tag "Tag" %>
 		<%= text_field_tag :description	%>

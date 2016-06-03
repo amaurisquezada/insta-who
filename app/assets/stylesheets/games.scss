@@ -31,6 +31,11 @@ body {
 	backface-visibility: hidden;
 	border-radius: 4px;
 	font-size: 20px;
+	font-weight: bold;
+	color: white;
+	text-align: left;
+	line-height: 13;
+	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 
 .front {
@@ -45,14 +50,16 @@ body {
 	transform: rotateX(-180deg);
 }
 
-.selected {
+.selected, #winning_card {
 	height: 11vw;
 	width: 14%;
-	background: blue;
 	clear: both;
 	position: absolute;
 	top: 5%;
 	right: 4%;
+	background: url(question-mark.png);
+	background-size: 100% 100%;
+	background-position: center center;
 }
 
 #keywords {

@@ -1,30 +1,30 @@
-User.create(email: "ch@gmail.com", username: "ch123", password: "chris", password_confirmation: "chris")
-User.where(username: "ch123").first.games.create(name: "my_first_game")
+User.create(email: "iwork@google.com", username: "aq", password: "12345", password_confirmation: "12345")
+User.where(username: "aq").first.games.create(name: "my_first_game")
 Game.where(name: "my_first_game").first.cards.create([
-	{name: "Amauris", avatar: File.new("/Users/christopherhan/Desktop/nycda/projects/insta-who/app/assets/images/1.jpg")},
-	{name: "Donovan", avatar: File.new("/Users/christopherhan/Desktop/nycda/projects/insta-who/app/assets/images/2.jpg")},
-	{name: "Chris", avatar: File.new("/Users/christopherhan/Desktop/nycda/projects/insta-who/app/assets/images/3.jpg")},
-	{name: "Jerry", avatar: File.new("/Users/christopherhan/Desktop/nycda/projects/insta-who/app/assets/images/4.jpg")},
-	{name: "Kim", avatar: File.new("/Users/christopherhan/Desktop/nycda/projects/insta-who/app/assets/images/5.jpg")},
-	{name: "Ohad", avatar: File.new("/Users/christopherhan/Desktop/nycda/projects/insta-who/app/assets/images/6.jpg")},
-	{name: "Quinn", avatar: File.new("/Users/christopherhan/Desktop/nycda/projects/insta-who/app/assets/images/7.jpg")},
-	{name: "Kirsten", avatar: File.new("/Users/christopherhan/Desktop/nycda/projects/insta-who/app/assets/images/8.jpg")},
-	{name: "Alex", avatar: File.new("/Users/christopherhan/Desktop/nycda/projects/insta-who/app/assets/images/9.jpg")},
-	{name: "Mandisa", avatar: File.new("/Users/christopherhan/Desktop/nycda/projects/insta-who/app/assets/images/10.jpg")},
-	{name: "Juan", avatar: File.new("/Users/christopherhan/Desktop/nycda/projects/insta-who/app/assets/images/11.jpg")},
-	{name: "Kassim", avatar: File.new("/Users/christopherhan/Desktop/nycda/projects/insta-who/app/assets/images/12.jpg")},
-	{name: "Jay", avatar: File.new("/Users/christopherhan/Desktop/nycda/projects/insta-who/app/assets/images/13.jpg")},
-	{name: "Rick", avatar: File.new("/Users/christopherhan/Desktop/nycda/projects/insta-who/app/assets/images/14.jpg")},
-	{name: "Bill", avatar: File.new("/Users/christopherhan/Desktop/nycda/projects/insta-who/app/assets/images/15.jpg")},
-	{name: "Matt E", avatar: File.new("/Users/christopherhan/Desktop/nycda/projects/insta-who/app/assets/images/16.jpg")},
-	{name: "Sanja", avatar: File.new("/Users/christopherhan/Desktop/nycda/projects/insta-who/app/assets/images/17.jpg")},
-	{name: "Matt S", avatar: File.new("/Users/christopherhan/Desktop/nycda/projects/insta-who/app/assets/images/18.jpg")},
-	{name: "Amzad", avatar: File.new("/Users/christopherhan/Desktop/nycda/projects/insta-who/app/assets/images/19.jpg")},
-	{name: "Greg", avatar: File.new("/Users/christopherhan/Desktop/nycda/projects/insta-who/app/assets/images/20.jpg")},
-	{name: "Sam", avatar: File.new("/Users/christopherhan/Desktop/nycda/projects/insta-who/app/assets/images/21.jpg")},
-	{name: "Liana", avatar: File.new("/Users/christopherhan/Desktop/nycda/projects/insta-who/app/assets/images/22.jpg")},
-	{name: "Andy", avatar: File.new("/Users/christopherhan/Desktop/nycda/projects/insta-who/app/assets/images/23.jpg")},
-	{name: "Niall", avatar: File.new("/Users/christopherhan/Desktop/nycda/projects/insta-who/app/assets/images/24.jpg")}])
+	{name: "Amauris", avatar: File.new("app/assets/images/1.jpg")},
+	{name: "Donovan", avatar: File.new("app/assets/images/2.jpg")},
+	{name: "Chris", avatar: File.new("app/assets/images/3.jpg")},
+	{name: "Jerry", avatar: File.new("app/assets/images/4.jpg")},
+	{name: "Kim", avatar: File.new("app/assets/images/5.jpg")},
+	{name: "Ohad", avatar: File.new("app/assets/images/6.jpg")},
+	{name: "Quinn", avatar: File.new("app/assets/images/7.jpg")},
+	{name: "Kirsten", avatar: File.new("app/assets/images/8.jpg")},
+	{name: "Alex", avatar: File.new("app/assets/images/9.jpg")},
+	{name: "Mandisa", avatar: File.new("app/assets/images/10.jpg")},
+	{name: "Juan", avatar: File.new("app/assets/images/11.jpg")},
+	{name: "Kassim", avatar: File.new("app/assets/images/12.jpg")},
+	{name: "Jay", avatar: File.new("app/assets/images/13.jpg")},
+	{name: "Rick", avatar: File.new("app/assets/images/14.jpg")},
+	{name: "Bill", avatar: File.new("app/assets/images/15.jpg")},
+	{name: "Matt E", avatar: File.new("app/assets/images/16.jpg")},
+	{name: "Sanja", avatar: File.new("app/assets/images/17.jpg")},
+	{name: "Matt S", avatar: File.new("app/assets/images/18.jpg")},
+	{name: "Amzad", avatar: File.new("app/assets/images/19.jpg")},
+	{name: "Greg", avatar: File.new("app/assets/images/20.jpg")},
+	{name: "Sam", avatar: File.new("app/assets/images/21.jpg")},
+	{name: "Liana", avatar: File.new("app/assets/images/22.jpg")},
+	{name: "Andy", avatar: File.new("app/assets/images/23.jpg")},
+	{name: "Niall", avatar: File.new("app/assets/images/24.jpg")}])
 
 Tag.create([
 	{description:"brown hair"},
@@ -75,11 +75,11 @@ add_tags("Amauris", ["black hair", "medium-length hair", "no facial hair", "brow
 
 add_tags("Donovan", ["black hair", "short hair", "no facial hair", "brown eyes", "dark/brown skin", "male", "taller than 5'7", "mac computer", "younger than 30", "native new yorker", "in a relationship", "prefers pepperoni pizza to cheese", "prefers Coke to Pepsi"])
 
-add_tags("Chris", ["black hair", "medium-length hair", "no facial hair", "brown eyes", "light skin", "male", "taller than 5'7", "mac computer", "younger than 30", "native new yorker", "single", "prefers pepperoni pizza to cheese", "prefers Coke to Pepsi"])
+add_tags("Chris", ["black hair", "medium-length hair", "no facial hair", "brown eyes", "light skin", "male", "taller than 5'7", "mac computer", "younger than 30", "native new yorker", "single", "prefers pepperoni pizza to cheese", "prefers Coke to Pepsi", "prefers Backstreet boys to N'Sync"])
 
 add_tags("Jerry", ["black hair", "medium-length hair", "beard", "mustache", "brown eyes", "light skin", "male", "pc computer", "younger than 30", "single", "wears glasses"])
 
-add_tags("Kim", ["black hair", "long hair", "no facial hair", "brown eyes", "light skin", "female", "mac computer", "younger than 30", "married", "prefers pepperoni pizza to cheese", "prefers Coke to Pepsi", "has earrings or gauges", "wears glasses"])
+add_tags("Kim", ["black hair", "long hair", "no facial hair", "brown eyes", "light skin", "female", "mac computer", "younger than 30", "married", "prefers pepperoni pizza to cheese", "prefers Coke to Pepsi", "has earrings or gauges", "wears glasses", "prefers Backstreet boys to N'Sync"])
 
 add_tags("Ohad", ["brown hair", "medium-length hair", "beard", "mustache", "blue eyes", "light skin", "male", "mac computer", "taller than 5'7", "younger than 30", "married", "prefers pepperoni pizza to cheese", "not a soda person", "wears glasses"])
 
@@ -95,7 +95,7 @@ add_tags("Juan", ["black hair", "short hair", "no facial hair", "brown eyes", "d
 
 add_tags("Kassim", ["black hair", "short hair", "no facial hair", "brown eyes", "dark/brown skin", "male", "taller than 5'7", "mac computer", "married", "prefers Coke to Pepsi", "younger than 30", "has earrings or gauges", "prefers Backstreet boys to N'Sync"])
 
-add_tags("Jay", ["black hair", "medium-length hair", "mustache", "brown eyes", "light skin", "male", "taller than 5'7", "pc computer", "single", "younger than 30", "has earrings or gauges"])
+add_tags("Jay", ["black hair", "medium-length hair", "mustache", "brown eyes", "light skin", "male", "taller than 5'7", "pc computer", "single", "younger than 30", "has earrings or gauges", "native new yorker"])
 
 add_tags("Rick", ["silver-grey hair", "medium-length hair", "no facial hair", "brown eyes", "light skin", "male", "taller than 5'7", "mac computer", "married", "native new yorker", "prefers Coke to Pepsi", "wears glasses"])
 
@@ -115,6 +115,6 @@ add_tags("Sam", ["brown hair", "medium-length hair", "no facial hair", "blue eye
 
 add_tags("Liana", ["brown hair", "long hair", "no facial hair", "blue eyes", "light skin", "female", "mac computer", "in a relationship", "not a soda person", "has earrings or gauges", "has tattoos", "native new yorker"])
 
-add_tags("Andy", ["blonde hair", "medium-length hair", "beard", "mustache", "blue eyes", "light skin", "male", "taller than 5'7", "mac computer", "younger than 30", "single", "not a soda person"])
+add_tags("Andy", ["blonde hair", "medium-length hair", "beard", "mustache", "blue eyes", "light skin", "male", "taller than 5'7", "mac computer", "younger than 30", "single", "not a soda person", "wears glasses"])
 
-add_tags("Niall", ["blonde hair", "medium-length hair", "no facial hair", "green eyes", "light skin", "male", "taller than 5'7", "mac computer", "younger than 30", "in a relationship", "native new yorker", "prefers Coke to Pepsi"])
+add_tags("Niall", ["blonde hair", "medium-length hair", "no facial hair", "green eyes", "light skin", "male", "taller than 5'7", "mac computer", "younger than 30", "in a relationship", "native new yorker", "prefers Coke to Pepsi", "wears glasses", "native new yorker"])
