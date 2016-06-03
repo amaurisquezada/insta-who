@@ -37,5 +37,16 @@
 						$('#you-lose').css('display', 'block');
 						winner = false;
 					};
+					$('.selected').replaceWith("<div id='winning_card'></div")
+					$('#winning_card').css('background', 'url("<%=raw @mycard.avatar.url%>")')
+					$('#winning_card').css('background-size', '100% 100%')
+					$('#winning_card').html("<%=raw @mycard.name%>")
+					$('#winning_card').css('font-size', '20px')
+					$('#winning_card').css('font-weight', 'bold')
+					$('#winning_card').css('color', 'white')
+					$('#winning_card').css('text-align', 'left')
+					$('#winning_card').css('line-height', '13')
+					$('#winning_card').css('text-shadow', '-1px 0 black, 0 1px black, 1px 0 black, 0 -1px black')
+
 			});
 		<% end %>
