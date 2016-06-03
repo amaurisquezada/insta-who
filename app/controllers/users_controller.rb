@@ -20,10 +20,12 @@ class UsersController < ApplicationController
     @user.save
     if @user.save
       log_in @user
-      redirect_to user_path(@user)
+      redirect_to users_path(@user)
     else
       render 'new'
     end
+
+
   end
 
   def delete
@@ -42,14 +44,14 @@ class UsersController < ApplicationController
   end
 
   def update
-    @user = User.find(params[:id])
-    if @user.update(user_params)
-      flash[:notice] = "User updated successfully"
-      redirect_to user_path(@user)
-    else
-      flash[:alert] = "Update failed"
-      render :edit
-    end
+    # @user = User.find(params[:id])
+    # if @user.update(user_params)
+    #   flash[:notice] = "User updated successfully"
+    #   redirect_to user_path(@user)
+    # else
+    #   flash[:alert] = "Update failed"
+    #   render :edit
+    # end
   end
 
   def test

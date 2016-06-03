@@ -1,14 +1,28 @@
-LOG IN
-<%= form_tag login_path do %>
-<%= label_tag :email %>
-<%= text_field_tag :email %><br><br>
-<%= label_tag :password %>
-<%= password_field_tag :password %><br><br>
-<%= submit_tag %>
+<div class="landing-container">
+<!-- <button id="signup-toggle-button">
+<h1 id="main-page-button">Insta Who</h1>
+</button> -->
+
+<!-- <div class="sessionz"><div class="close"></div> -->
+
+<%= form_for @user, :url => users_new_path, :html => { :multipart => true } do |f| %>
+<ul>
+<li><h2>Sign Up</h2></li>
+<li>
+<%= f.text_field :email, class: "field-style field-full align-none", placeholder: "Email"%>
+</li>
+<li>
+<%= f.password_field :password, class: "field-style field-full align-none", placeholder: "Password" %>
+</li>
+<li>
+<%= f.password_field :password_confirmation, class: "field-style field-full align-none", placeholder: "Password Confirmation" %>
+</li>
+<%= f.label :avatar %>
+<%= f.file_field :avatar %>
+<%= f.submit :submit, data: {disable_with: "Submitting..."} %><br><br><hr><br>
+
 <% end %>
-<hr>
-<% if 1 %>
-<%= link_to "LOG OUT", logout_path, method: :delete %>
-<% else %>
-You are not logged in.
-<% end %>
+</ul>
+<!-- </div> -->
+
+</div>

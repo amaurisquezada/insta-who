@@ -5,18 +5,19 @@
 			<br />
 			<br />
 		</div>
-		<div class="user-links">				
-			<h2><%= @user.email %></h2>
-			<br />
-			<%= link_to "Edit Profile", edit_user_path, class: "user-show-def-font" %>
-			<br />
-			<br />
-			<%= link_to "DELETE USER", user_path(@user), method: :delete %>
-			<br />
-			<br />
-			<%= link_to "PLAY GAME", game_path, method: :delete %>
-			<button class="play-game-button">PLAY GAME!
-			</button>
+		<div class="user-links">
+			<div class="user-link-links">
+				<h2 class="email-text"><%= @user.email %></h2>
+				<br />
+				<%= link_to "Edit Profile", edit_user_path, class: "user-show-def-font" %>
+				<br />
+				<br />
+				<%= link_to "DELETE USER", user_path(@user), method: :delete %>
+				<br />
+				<br />
+			</div>				
+			 
+			<%= button_to "PLAY GAME!", {action: "show", controller: "games"}, class: "play-game-button", method: "get" %>
 		</div>
 		<br clear="all" />
 		<br />
@@ -93,10 +94,11 @@
 			<div class="new-card-submit">
 				<%= submit_tag :submit, data: {disable_with: "Submitting..."} %>
 			</div>
-			<br clear="all" />
 
 			<% end %>
 		
+			<br clear="all" />
+
 		</div>
 		<br />
 		<br />

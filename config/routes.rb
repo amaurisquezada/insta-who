@@ -7,7 +7,7 @@ Rails.application.routes.draw do
 
   get 'card/new'
 
-  get 'card/create'
+  post 'card/create'
 
   get 'card/index'
 

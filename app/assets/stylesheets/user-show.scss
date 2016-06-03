@@ -1,14 +1,32 @@
+* {
+}
+
+/*.email-text {
+	font-size: 100px;
+	font-family: courier;
+}*/
+
+.user-link-links {
+	margin-left: 12em;
+	width: 20em;
+	text-align: center;
+	background: rgba(255, 255, 255, .7);
+	margin-top: -.5em;
+}
 
 #user-show-container{
 	width: 100%;
 	height: 100%;
-	background: lightgray;
+	background: rgba(220, 201, 178, .55);
+	font-family: courier;
 }
 
 .user-info-container{
+	padding-top: 45px;
+	background: url("pback3.jpeg");
+	background-size: cover; 
 	width: 100%;
 	height: 250px;
-	margin-top: 40px;
 	display: inline-block;
 	float: left;
 	border-bottom: 1px solid #000;
@@ -27,11 +45,11 @@
 	display: inline-block;
 }
 
-
 .play-game-button{
 	border-radius: 25px;
 	background: #B22222;
-	margin-left: 250px;
+	margin-top: .5em;
+	margin-left: 3.3em;
 	border: 10px solid white;
 	padding-left: 25px;
 	padding-right: 25px;
@@ -73,21 +91,21 @@
 }
 
 .drop-down-container{
-	width: 100px;
+	width: 150px;
 	display: inline-block;
 	margin: 10px;
 	float: left;
 }
 
 .drop-down{
-	width: 80px;
+	width: 110px;
 	height: 35px;
 	font-size: 18px;
 }
 
 .new-card-submit{
+	padding-top: 40px;
 	width: 75px;
-	padding-top: 110px;
 	display: inline-block;
 
 	input{
@@ -97,4 +115,6 @@
 		border-radius: 10px;
 	}
 }
+
+
 
