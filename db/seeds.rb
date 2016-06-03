@@ -75,11 +75,11 @@ add_tags("Amauris", ["black hair", "medium-length hair", "no facial hair", "brow
 
 add_tags("Donovan", ["black hair", "short hair", "no facial hair", "brown eyes", "dark/brown skin", "male", "taller than 5'7", "mac computer", "younger than 30", "native new yorker", "in a relationship", "prefers pepperoni pizza to cheese", "prefers Coke to Pepsi"])
 
-add_tags("Chris", ["black hair", "medium-length hair", "no facial hair", "brown eyes", "light skin", "male", "taller than 5'7", "mac computer", "younger than 30", "native new yorker", "single", "prefers pepperoni pizza to cheese", "prefers Coke to Pepsi"])
+add_tags("Chris", ["black hair", "medium-length hair", "no facial hair", "brown eyes", "light skin", "male", "taller than 5'7", "mac computer", "younger than 30", "native new yorker", "single", "prefers pepperoni pizza to cheese", "prefers Coke to Pepsi", "prefers Backstreet boys to N'Sync"])
 
 add_tags("Jerry", ["black hair", "medium-length hair", "beard", "mustache", "brown eyes", "light skin", "male", "pc computer", "younger than 30", "single", "wears glasses"])
 
-add_tags("Kim", ["black hair", "long hair", "no facial hair", "brown eyes", "light skin", "female", "mac computer", "younger than 30", "married", "prefers pepperoni pizza to cheese", "prefers Coke to Pepsi", "has earrings or gauges", "wears glasses"])
+add_tags("Kim", ["black hair", "long hair", "no facial hair", "brown eyes", "light skin", "female", "mac computer", "younger than 30", "married", "prefers pepperoni pizza to cheese", "prefers Coke to Pepsi", "has earrings or gauges", "wears glasses", "prefers Backstreet boys to N'Sync"])
 
 add_tags("Ohad", ["brown hair", "medium-length hair", "beard", "mustache", "blue eyes", "light skin", "male", "mac computer", "taller than 5'7", "younger than 30", "married", "prefers pepperoni pizza to cheese", "not a soda person", "wears glasses"])
 
@@ -95,7 +95,7 @@ add_tags("Juan", ["black hair", "short hair", "no facial hair", "brown eyes", "d
 
 add_tags("Kassim", ["black hair", "short hair", "no facial hair", "brown eyes", "dark/brown skin", "male", "taller than 5'7", "mac computer", "married", "prefers Coke to Pepsi", "younger than 30", "has earrings or gauges", "prefers Backstreet boys to N'Sync"])
 
-add_tags("Jay", ["black hair", "medium-length hair", "mustache", "brown eyes", "light skin", "male", "taller than 5'7", "pc computer", "single", "younger than 30", "has earrings or gauges"])
+add_tags("Jay", ["black hair", "medium-length hair", "mustache", "brown eyes", "light skin", "male", "taller than 5'7", "pc computer", "single", "younger than 30", "has earrings or gauges", , "native new yorker"])
 
 add_tags("Rick", ["silver-grey hair", "medium-length hair", "no facial hair", "brown eyes", "light skin", "male", "taller than 5'7", "mac computer", "married", "native new yorker", "prefers Coke to Pepsi", "wears glasses"])
 
@@ -115,6 +115,6 @@ add_tags("Sam", ["brown hair", "medium-length hair", "no facial hair", "blue eye
 
 add_tags("Liana", ["brown hair", "long hair", "no facial hair", "blue eyes", "light skin", "female", "mac computer", "in a relationship", "not a soda person", "has earrings or gauges", "has tattoos", "native new yorker"])
 
-add_tags("Andy", ["blonde hair", "medium-length hair", "beard", "mustache", "blue eyes", "light skin", "male", "taller than 5'7", "mac computer", "younger than 30", "single", "not a soda person"])
+add_tags("Andy", ["blonde hair", "medium-length hair", "beard", "mustache", "blue eyes", "light skin", "male", "taller than 5'7", "mac computer", "younger than 30", "single", "not a soda person", "wears glasses"])
 
-add_tags("Niall", ["blonde hair", "medium-length hair", "no facial hair", "green eyes", "light skin", "male", "taller than 5'7", "mac computer", "younger than 30", "in a relationship", "native new yorker", "prefers Coke to Pepsi"])
+add_tags("Niall", ["blonde hair", "medium-length hair", "no facial hair", "green eyes", "light skin", "male", "taller than 5'7", "mac computer", "younger than 30", "in a relationship", "native new yorker", "prefers Coke to Pepsi", "wears glasses", "native new yorker"])

@@ -14,7 +14,7 @@ class GamesController < ApplicationController
     @myuser = User.where(username: "aq").first
   	MysteryCard.where(user_id: @myuser.id, game_id: @mygame.id).destroy_all
   	MysteryCard.create(user_id: @myuser.id, game_id: @mygame.id, card_name: @mycard.name, counter: 0)
-    @available_tags = @mygame.cards.map{|card| card.tags.map{|tag| tag.description}}.flatten.uniq
+    @available_tags = @mygame.cards.map{|card| card.tags.map{|tag| tag.description}}.flatten.uniq.sort
   end
 
   def update_card_position
