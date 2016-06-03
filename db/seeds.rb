@@ -27,99 +27,99 @@ Game.where(name: "my_first_game").first.cards.create([
 	{name: "Niall"}])
 
 
-	amauris = Card.where(name: "Amauris")
+	amauris = Card.where(name: "Amauris").first
 	amauris.avatar = File.open("app/assets/images/1.jpg")
 	amauris.save!
 
-	donovan = Card.where(name: "Donovan")
+	donovan = Card.where(name: "Donovan").first
 	donovan.avatar = File.open("app/assets/images/2.jpg")
 	donovan.save!
 
-	chris = Card.where(name: "Chris")
+	chris = Card.where(name: "Chris").first
 	chris.avatar = File.open("app/assets/images/3.jpg")
 	chris.save!
 
-	jerry = Card.where(name: "Jerry")
+	jerry = Card.where(name: "Jerry").first
 	jerry.avatar = File.open("app/assets/images/4.jpg")
 	jerry.save!
 
-	kim = Card.where(name: "Kim")
+	kim = Card.where(name: "Kim").first
 	kim.avatar = File.open("app/assets/images/5.jpg")
 	kim.save!
 
-	ohad = Card.where(name: "Ohad")
-	ohad.avatar = File.open("app/assets/images/6.jpg")
+	ohad = Card.where(name: "Ohad").first
+	ohad.avatar = File.open("app/assets/images/6.jpg").first
 	ohad.save!
 
-	quinn = Card.where(name: "Quinn")
-	quinn.avatar = File.open("app/assets/images/7.jpg")
+	quinn = Card.where(name: "Quinn").first
+	quinn.avatar = File.open("app/assets/images/7.jpg").first
 	quinn.save!
 
-	kirsten = Card.where(name: "Kirsten")
-	kirsten.avatar = File.open("app/assets/images/8.jpg")
+	kirsten = Card.where(name: "Kirsten").first
+	kirsten.avatar = File.open("app/assets/images/8.jpg").first
 	kirsten.save!
 
-	alex = Card.where(name: "Alex")
+	alex = Card.where(name: "Alex").first
 	alex.avatar = File.open("app/assets/images/9.jpg")
 	alex.save!
 
-	mandisa = Card.where(name: "Mandisa")
+	mandisa = Card.where(name: "Mandisa").first
 	mandisa.avatar = File.open("app/assets/images/10.jpg")
 	mandisa.save!
 
-	juan = Card.where(name: "Juan")
+	juan = Card.where(name: "Juan").first
 	juan.avatar = File.open("app/assets/images/11.jpg")
 	juan.save!
 
-	kassim = Card.where(name: "Kassim")
+	kassim = Card.where(name: "Kassim").first
 	kassim.avatar = File.open("app/assets/images/12.jpg")
 	kassim.save!
 
-	jay = Card.where(name: "Jay")
+	jay = Card.where(name: "Jay").first
 	jay.avatar = File.open("app/assets/images/13.jpg")
 	jay.save!
 
-	rick = Card.where(name: "Rick")
+	rick = Card.where(name: "Rick").first
 	rick.avatar = File.open("app/assets/images/14.jpg")
 	rick.save!
 
-	bill = Card.where(name: "Bill")
+	bill = Card.where(name: "Bill").first
 	bill.avatar = File.open("app/assets/images/15.jpg")
 	bill.save!
 
-	matt_e = Card.where(name: "Matt E")
+	matt_e = Card.where(name: "Matt E").first
 	matt_e.avatar = File.open("app/assets/images/16.jpg")
 	matt_e.save!
 
-	sanja = Card.where(name: "Sanja")
+	sanja = Card.where(name: "Sanja").first
 	sanja.avatar = File.open("app/assets/images/17.jpg")
 	sanja.save!
 
-	matt_s = Card.where(name: "Matt S")
+	matt_s = Card.where(name: "Matt S").first
 	matt_s.avatar = File.open("app/assets/images/18.jpg")
 	matt_s.save!
 
-	amzad = Card.where(name: "Amzad")
+	amzad = Card.where(name: "Amzad").first
 	amzad.avatar = File.open("app/assets/images/19.jpg")
 	amzad.save!
 
-	greg = Card.where(name: "Greg")
+	greg = Card.where(name: "Greg").first
 	greg.avatar = File.open("app/assets/images/20.jpg")
 	greg.save!
 
-	sam = Card.where(name: "Sam")
+	sam = Card.where(name: "Sam").first
 	sam.avatar = File.open("app/assets/images/21.jpg")
 	sam.save!
 
-	liana = Card.where(name: "Liana")
+	liana = Card.where(name: "Liana").first
 	liana.avatar = File.open("app/assets/images/22.jpg")
 	liana.save!
 
-	andy = Card.where(name: "Andy")
+	andy = Card.where(name: "Andy").first
 	andy.avatar = File.open("app/assets/images/23.jpg")
 	andy.save!
 
-	niall = Card.where(name: "Niall")
+	niall = Card.where(name: "Niall").first
 	niall.avatar = File.open("app/assets/images/24.jpg")
 	niall.save!
 
