@@ -21,7 +21,7 @@
 		<%= f.file_field :avatar %>
 		<%= f.submit :submit, data: {disable_with: "Submitting..."} %><br><br><hr><br>
 		<li>Already a User? <%= link_to 'Login', home_show_path %></li><hr><br>
-		<li><button>Just Play</button></li>
+		<li><%= button_to 'Just Play', games_path %></li>
 	<% end %>
 	</ul>
 <!-- </div> -->
