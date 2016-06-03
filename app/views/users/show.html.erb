@@ -26,7 +26,7 @@
 		<div class="avatar-upload-field">
 			<h2>Create a New Card!</h2>
 			<br />
-			<%= form_tag card_create_path, multipart: true do %>
+			<%= form_tag cards_create_path, multipart: true do %>
 			<div>
 				<h2><%= label_tag "Name:" %></h2>
 				<%= text_field_tag :name %>
