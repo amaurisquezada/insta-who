@@ -1,7 +1,7 @@
 <h1>Card#new</h1>
 <p>Find me in app/views/card/new.html.erb</p>
 
-<%= form_tag cards_create_path, multipart: true do %>
+<%= form_for @card, card_create_path, multipart: true do %>
 
 	<%= label_tag :name %>
 	<%= text_field_tag :name %>
@@ -11,26 +11,28 @@
 	<br />
 
 	<h3>Gender</h3>
-		<%= select_tag(:first, options_for_select([ ["Male", 40], ["Female", 41] ])) %>
+		<%= select_tag(:first, options_for_select([ ["Male", "male"], ["Female", "female"] ])) %>
 	<h3>Hair Color</h3>
-		<%= select_tag(:second, options_for_select([["Black", 3], ["Brown", 4], ["Blonde", 5], ["Red", 6], ["White", 7], ["Dyed", 8], ["Bald", 9] ])) %>
+		<%= select_tag(:second, options_for_select([["Black", "black hair"], ["Brown", "brown hair"], ["Blonde", "blonde hair"], ["Red", "red hair"], ["White", "silver-grey hair"], ["Bald", "bald"] ])) %>
 	<br />
 	<h3>Hair Length</h3>
-		<%= select_tag(:third, options_for_select([ ["Short", 10], ["Medium", 11], ["Long", 12]  ])) %>
+		<%= select_tag(:third, options_for_select([ ["Short", "short hair"], ["Medium", "medium-length hair"], ["Long", "long hair"]  ])) %>
 	<h3>Facial Hair</h3>
-	<%= select_tag(:fourth, options_for_select([ ["Beard", 13], ["None", 14], ["Mustache", 15] ])) %>
+	<%= select_tag(:fourth, options_for_select([ ["Beard", "beard"], ["None", "no facial hair"], ["Mustache", "mustache"] ])) %>
 	<h3>Eye Color</h3>
-		<%= select_tag(:fifth, options_for_select([ ["Black", 16], ["Brown", 17], ["Blue", 18], ["Green", 19], ["Other", 20] ])) %>
+		<%= select_tag(:fifth, options_for_select([ ["Brown", "brown eyes"], ["Blue", "blue eyes"], ["Green", "green eyes"], ["Hazel", "hazel eyes"] ])) %>
 	<h3>Skin Tone</h3>
-		<%= select_tag(:sixth, options_for_select([ ["Light", 22], ["Dark", 23] ])) %>
+		<%= select_tag(:sixth, options_for_select([ ["Light", "light skin"], ["Dark", "dark/brown skin"] ])) %>
 	<h3>Glasses</h3>
-		<%= select_tag(:seventh, options_for_select([ ["Yes", 23], ["No", 24] ])) %>
-	<h3>Height</h3>
-		<%= select_tag(:eighth, options_for_select([["Above 5'7", 25], ["Below 5'7", 26], ["Kassims' Height", 27] ])) %>
+		<!-- check again to default drop down to nil -->
+		<%= select_tag(:seventh, options_for_select([ ["Wears Glasses", "wears glasses"])) %>
+	<h3>Tall?</h3>
+		<!-- check again to default drop down to nil -->
+		<%= select_tag(:eighth, options_for_select([["Tall", "taller than 5'7"] ])) %>
 	<h3>Relationship</h3>
-		<%= select_tag(:ninth, options_for_select([ ["Married", 32], ["In a Relationship", 33], ["Single", 34] ])) %>
+		<%= select_tag(:ninth, options_for_select([ ["Married", "married"], ["In a Relationship", "in a relationship"], ["Single", "single"] ])) %>
 	<h3>Random</h3>
-		<%= select_tag(:tenth, options_for_select([ ["Mac User", 29], ["PC User", 28], ["Younger than 30", 30], ["Native New Yorker", 31], ["Prefers Cheese Pizza", 35], ["Prefers Pepperoni Pizza", 36], ["Wears Earings"], ["Has Gauges"], ["Has Tattoos", 39] ])) %>
+		<%= select_tag(:tenth, options_for_select([ ["Mac User", "mac computer"], ["PC User", "pc computer"], ["Younger than 30", "younger than 30"], ["Native New Yorker", "native new yorker"],["Prefers Pepperoni Pizza", "prefers pepperoni pizza to cheese"],["Wears Earrings", "has earrings or gauges" ],["Has Tattoos", "has tattoos"] ])) %>
 
 		<%= submit_tag :submit, data: {disable_with: "Submitting..."} %>
 

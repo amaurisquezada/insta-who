@@ -1,29 +1,31 @@
+<!-- Give container class .landing-container -->
 <div class="landing-container">
 	<button id="signup-toggle-button">
 		<h1 id="main-page-button">Insta Who</h1>
 	</button>
 	<div class="backdrop"></div>
-
-<!-- 	<div class="sessionz"><div class="close"></div> -->
-	<%= form_for @user, :url => create_path, :html => { :multipart => true } do |f| %>
-	<ul>
-		<li><h2>Sign Up</h2></li>
-		<li>
-		<%= f.text_field :email, class: "field-style field-full align-none", placeholder: "Email"%>
-		</li>
-		<li>
-		<%= f.password_field :password, class: "field-style field-full align-none", placeholder: "Password" %>
-		</li>
-		<li>
-		<%= f.password_field :password_confirmation, class: "field-style field-full align-none", placeholder: "Password Confirmation" %>
-		</li>
-		<%= f.label :avatar %>
-		<%= f.file_field :avatar %>
-		<%= f.submit :submit, data: {disable_with: "Submitting..."} %><br><br><hr><br>
-		<li>Already a User? <%= link_to 'Login', home_show_path %></li><hr><br>
-		<li><%= button_to 'Just Play', games_path %></li>
-	<% end %>
+	<%= form_tag({:action => 'create', :controller => 'sessions'}, {:class => 'login-form'}) do %>
+		<ul>
+			<li><h2>LOG IN</h2></li>
+			<li>
+			</li>
+			<li>
+				<%= label_tag :email, nil, class: "field-style field-full align-none" %>
+			</li>
+			<li>
+				<%= text_field_tag :email, nil, class: "field-style field-full align-none" %><br><br>
+			</li>
+			<li>
+				<%= label_tag :password, nil, class: "field-style field-full align-none" %>
+			</li>
+			<li>
+				<%= password_field_tag :password, nil, class: "field-style field-full align-none" %><br><br>
+			</li>
+			<li>
+				<%= submit_tag %>
+			</li>
+			<li>Need an Account? <%= link_to 'Sign Up!', home_show_path %></li><hr><br>
+		<% end %>
+		<!-- <hr> -->
 	</ul>
-<!-- </div> -->
-
 </div>

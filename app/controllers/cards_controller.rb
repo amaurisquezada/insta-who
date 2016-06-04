@@ -12,19 +12,20 @@ class CardsController < ApplicationController
     
     if @card.name != ""
       @card.save
-      @card.tags << Tag.find(params[:first].to_i)
-      @card.tags << Tag.find(params[:second].to_i)
-      @card.tags << Tag.find(params[:third].to_i)
-      @card.tags << Tag.find(params[:fourth].to_i)
-      @card.tags << Tag.find(params[:fifth].to_i)
-      @card.tags << Tag.find(params[:sixth].to_i)
-      @card.tags << Tag.find(params[:seventh].to_i)
-      @card.tags << Tag.find(params[:eighth].to_i)
-      @card.tags << Tag.find(params[:ninth].to_i)
-      @card.tags << Tag.find(params[:tenth].to_i)
+      @card.tags << Tag.where(description: params[:first])
+      @card.tags << Tag.where(description: params[:second])
+      @card.tags << Tag.where(description: params[:third])
+      @card.tags << Tag.where(description: params[:fourth])
+      @card.tags << Tag.where(description: params[:fifth])
+      @card.tags << Tag.where(description: params[:sixth])
+      @card.tags << Tag.where(description: params[:seventh])
+      @card.tags << Tag.where(description: params[:eighth])
+      @card.tags << Tag.where(description: params[:ninth])
+      @card.tags << Tag.where(description: params[:tenth])
 
       
       redirect_to card_show_path
+      flash[:notice] = "Creation Successful"
     else
       flash[:alert] = "You have to give your card a name!"
     end
