@@ -8,6 +8,9 @@ body {
 #card-container {
 	perspective: 5000px;
 	width: 83%;
+	position: absolute;
+	top: 0;
+	left: 0;
 }
 
 
@@ -63,10 +66,10 @@ body {
 }
 
 #keywords {
-	position: relative;
+	position: absolute;
 	width: 20%;
-	left: 80%;
-	bottom: 60%;
+	right: 1%;
+	bottom: 25vh;
 }
 
 #input-field {
@@ -98,9 +101,9 @@ body {
 
 #you-win, #you-lose{
 	display: none;
-	position: relative;
-	margin-top: 76vh;
-	left: 4%;
+	position: absolute;
+	right: 1%;
+	bottom: 5%;
 
 }
 

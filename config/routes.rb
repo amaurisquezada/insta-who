@@ -7,11 +7,7 @@ Rails.application.routes.draw do
 
   get 'cards/new'
 
-<<<<<<< HEAD
-  post 'card/create'
-=======
   get 'cards/create'
->>>>>>> e2c32bf3e3b4eeea363e1ab20a43c971f70c08f3
 
   get 'cards/index'
 
