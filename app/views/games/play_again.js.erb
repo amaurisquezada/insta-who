@@ -17,7 +17,5 @@
 		$('#card-container').randomize($('.one-card-container'));
 		newMysteryId = "<%= raw @mycard.name.downcase.gsub(' ', '-') %>";
 		$('#winning_card').replaceWith("<div class='selected'></div")
-		$('.selected').removeAttr('id');
-		$('.selected').attr('id', newMysteryId);
   	$('#keywords .button_to input').prop('disabled', false);
 		winner = undefined;

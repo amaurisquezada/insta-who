@@ -2,26 +2,28 @@
 		<div id="card-container">
 			<% @mygame.cards.shuffle.each do |student| %>
 				<div class="one-card-container <%=student.name.gsub(" ", "-").downcase%>">
-					<div id=<%=student.name.gsub(" ", "-").downcase%> style= 'background: url("<%= student.avatar.url %>");background-size: 100% 100%'class="cards front"><%= student.name %></div>
+					<div id=<%=student.name.gsub(" ", "-").downcase%> style= 'background: url("<%= student.avatar.url %>");background-size: 100% 100%'class="cards front"><span id="<%=student.name.gsub(" ", "-").downcase%>-label" class= "card_names"><%= student.name %></span></div>
 					<div class="back"></div>
 				</div>
 			<% end %>
 		</div>
 	</div>
-	<div id=<%=@mycard.name.gsub(" ", "-").downcase%> class="selected"></div>
-	<div id="all-guesses">
-		<div class="guesses" id="guess1"></div>
-		<div class="guesses" id="guess2"></div>
-		<div class="guesses" id="guess3"></div>
-		<div class="guesses" id="guess4"></div>
-		<div class="guesses" id="guess5"></div>
-	</div>	
-	<div id="keywords">
-		<% @available_tags.each do |tag| %>
-			<%= button_to tag,  {controller: "games", action: "update_card_position", selection: tag}, method: 'post', remote: true %>
-		<% end %>
-	</div>
+	<div id="right-wrapper">
+		<div class="selected"></div>
+		<div id="all-guesses">
+			<div class="guesses" id="guess1"></div>
+			<div class="guesses" id="guess2"></div>
+			<div class="guesses" id="guess3"></div>
+			<div class="guesses" id="guess4"></div>
+			<div class="guesses" id="guess5"></div>
+		</div>	
+		<div id="keywords">
+			<% @available_tags.each do |tag| %>
+				<%= button_to tag,  {controller: "games", action: "update_card_position", selection: tag}, method: 'post', remote: true %>
+			<% end %>
+		</div>
 
+	</div>
 	<div id="you-win">
 		<h1 id="result-win">YOU WIN!</h1>
 		<%= button_to "Play Again!", play_again_path, method: 'post', remote: true%>
