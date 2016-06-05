@@ -42,6 +42,8 @@ gem 'bcrypt', '~> 3.1.7'
 
 gem 'pry'
 
+gem 'aws-sdk', '~> 2.3'
+
 # Use Unicorn as the app server
 # gem 'unicorn'
 
