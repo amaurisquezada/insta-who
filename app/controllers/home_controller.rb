@@ -2,7 +2,6 @@ class HomeController < ApplicationController
 
 
 
-	before_filter :authorize
 
   # before_action :logged_in_user, only: [:edit, :update]
 
