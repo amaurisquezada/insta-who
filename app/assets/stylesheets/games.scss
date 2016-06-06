@@ -9,6 +9,7 @@
 
 
 .one-card-container {
+	-webkit-perspective: 5000px;
 	position: relative;
 	height: 24%;
 	width: 15.4%;
@@ -36,6 +37,7 @@
 
 
 .front, .back {
+	-webkit-perspective: 5000px;
 	height: 100%;
 	width: 100%;
 	position: absolute;
