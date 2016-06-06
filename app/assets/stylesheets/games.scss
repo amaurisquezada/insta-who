@@ -136,6 +136,18 @@
 	top: 20vh;
 }
 
+#you-win {
+	border: 4px green solid;
+	border-radius: 4px;
+	color: green;
+}
+
+#you-lose {
+	border: 4px green solid;
+	border-radius: 4px;
+	color: red;
+}
+
 #result-win, #result-lose {
 	font-size: 50px;
 	text-align: center;
