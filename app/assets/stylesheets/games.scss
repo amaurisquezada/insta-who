@@ -35,6 +35,7 @@
 	position: absolute;
 	top: 0;
 	left: 0;
+	-webkit-backface-visibility: hidden;
 	backface-visibility: hidden;
 	border-radius: 4px;
 }
@@ -58,6 +59,7 @@
 	background: url(question-mark.png);
 	background-size: 100% 100%;
 	background-position: center center;
+	-webkit-transform: rotateX(-180deg);
 	transform: rotateX(-180deg);
 }
 
