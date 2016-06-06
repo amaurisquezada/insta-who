@@ -53,7 +53,7 @@ class CardsController < ApplicationController
   end
 
   def update
-    @card = Card.update(card_params)
+    @card = Card.update(params[:id], card_params)
     redirect_to cards_show_path
   end
 
