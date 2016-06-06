@@ -1,5 +1,5 @@
 #card-container {
-	perspective: 5000px;
+	-webkit-perspective: 5000px;
 	width: 80%;
 	height: 100vh;
 	position: absolute;
@@ -41,8 +41,11 @@
 	position: absolute;
 	top: 0;
 	left: 0;
+	-webkit-transform: translate3d(0,0,0);
 	-webkit-backface-visibility: hidden;
 	backface-visibility: hidden;
+	-webkit-transform-style: preserve-3d;
+	transform-style: preserve-3d;
 	border-radius: 4px;
 }
 
