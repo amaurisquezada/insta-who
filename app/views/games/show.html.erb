@@ -2,7 +2,7 @@
 		<div id="card-container">
 			<% @mygame.cards.shuffle.each do |student| %>
 				<div class="one-card-container <%=student.name.gsub(" ", "-").downcase%>">
-					<div id=<%=student.name.gsub(" ", "-").downcase%> style= 'background: url("<%= "app/assets/images/".concat(student.name.downcase.gsub(" ", "_")).concat(".jpg") %>");background-size: 100% 100%'class="cards front"><span id="<%=student.name.gsub(" ", "-").downcase%>-label" class= "card_names"><%= student.name %></span></div>
+					<div id=<%=student.name.gsub(" ", "-").downcase%> style= 'background: url("<%= student.avatar.url %>");background-size: 100% 100%'class="cards front"><span id="<%=student.name.gsub(" ", "-").downcase%>-label" class= "card_names"><%= student.name %></span></div>
 					<div class="back"></div>
 				</div>
 			<% end %>
