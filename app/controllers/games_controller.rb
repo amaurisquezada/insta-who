@@ -1,6 +1,4 @@
 class GamesController < ApplicationController
-
-  before_filter :authorize
   
   def new
   end
@@ -11,7 +9,12 @@ class GamesController < ApplicationController
   def show
   	@mygame = Game.last
   	@mycard = @mygame.cards.sample
+    if current_user
     @myuser = current_user
+    else
+    @myuser = User.create(email: "guest@guest.com", username: "guest".concat(User.last.id), password: "guest", password_confirmation: "guest") 
+    session[:user_id] = @myuser.id
+    end
   	MysteryCard.where(user_id: @myuser.id, game_id: @mygame.id).destroy_all
   	MysteryCard.create(user_id: @myuser.id, game_id: @mygame.id, card_name: @mycard.name, counter: 0)
     @available_tags = @mygame.cards.map{|card| card.tags.map{|tag| tag.description}}.flatten.uniq.sort

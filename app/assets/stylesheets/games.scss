@@ -5,13 +5,15 @@
 	position: absolute;
 	top: 10px;
 	left: 10px;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
 }
 
 
 .one-card-container {
 	-webkit-perspective: 5000px;
 	position: relative;
-	height: 24%;
+	height: 23%;
 	width: 15.4%;
 	float: left;
 	-webkit-backface-visibility: hidden;
