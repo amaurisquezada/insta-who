@@ -12,7 +12,7 @@ class GamesController < ApplicationController
     if current_user
     @myuser = current_user
     else
-    @myuser = User.create(email: "guest@guest.com", username: "guest".concat(User.last.id), password: "guest", password_confirmation: "guest") 
+    @myuser = User.create(email: "guest@guest.com", username: "guest".concat((User.last.id + 1).to_s), password: "guest", password_confirmation: "guest") 
     session[:user_id] = @myuser.id
     end
   	MysteryCard.where(user_id: @myuser.id, game_id: @mygame.id).destroy_all
