@@ -15,18 +15,21 @@ body {
     display: none;
 }
 
+.landing-container button {
+    text-align: center;
+    border-radius: 25px;
+    position: absolute;
+    border: 10px solid white;
+    background: #B22222;
+    padding-left: 25px;
+    padding-right: 25px;
+    margin-left: 30%;
+    margin-top: 40vh;
+
+}
+
 #main-page-button {
-	border-radius: 25px;
-	position: absolute;
-    left: 398px;
-    top: 220px;
-	background: #B22222;
-	border: 10px solid white;
-	padding-left: 25px;
-	padding-right: 25px;
 	color: white;
-	text-align: center;
-	z-index: 1;
 	font-style: comic;
 	font-size: 110px;
 }
