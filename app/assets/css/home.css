@@ -5,7 +5,7 @@
   background: url(background5.jpeg) no-repeat center center fixed; }
 
 body {
-  background-size: cover;
+  background-size: 100%;
   background-repeat: no-repeat; }
 
 #nav-toggle-button, #main-nav-container {
