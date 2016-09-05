@@ -10,6 +10,9 @@ body {
     height: 100vh;
     background: url(background5.jpeg) no-repeat center center fixed;
     background-size: cover;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
 }
 
 
@@ -17,15 +20,34 @@ body {
     display: none;
 }
 
-.landing-container button {
+#button-container {
+    text-align: center;
+    display: inline-block;
+}
+
+.startup-button {
     text-align: center;
     border-radius: 25px;
-    position: absolute;
     border: 10px solid white;
     background: #B22222;
     padding-left: 95px;
-    padding-right: 95px;
+    padding-right: 22px;
+    font-size: 110px;
+    color: white;
+    font-weight: bold;
+}
 
+.startup-button:hover {
+    cursor: pointer;
+}
+
+#hb-caption {
+    color: white;
+    font-size: 11px;
+    margin-top: 0;
+    position: relative;
+    right: 50%;
+    top: 14px;
 }
 
 #main-page-button {
@@ -67,13 +89,12 @@ body {
 
 .login-form{
     z-index: 600;
-    display: none;
     position: absolute;
-    left: 500px;
-    width: 378px;
+    width: 35%;
+    margin-left: 32.5%;
+    margin-top: 20%;
     background: #FAFAFA;
     padding: 30px;
-    margin: 50px auto;
     box-shadow: 1px 1px 25px rgba(0, 0, 0, 0.35);
     border-radius: 10px;
     border: 10px solid #305A72;
