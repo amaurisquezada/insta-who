@@ -1,6 +1,6 @@
 #card-container {
   -webkit-perspective: 5000px;
-  width: 75%;
+  width: 80%;
   height: 100vh;
   position: absolute;
   top: 10px;
@@ -27,7 +27,11 @@
 .instructions {
   float: left;
   display: block;
-  margin-top: 0; }
+  margin-top: 0;
+  width: 80%; }
+
+.warning {
+  color: red; }
 
 #winner_name {
   font-size: 20px;
@@ -76,14 +80,13 @@
   height: 100vh;
   position: absolute;
   top: 10px;
-  right: 10px; }
+  right: 0; }
 
 .selected, #winning_card {
   height: 11vw;
   width: 80%;
   clear: both;
   position: absolute;
-  top: 5%;
   right: 10%;
   background: url(question-mark.png);
   background-size: 100% 100%;
@@ -94,7 +97,8 @@
   top: 18vw;
   left: 20px;
   height: 55vh;
-  overflow: auto; }
+  overflow: auto;
+  border: 1px solid black; }
 
 .guesses {
   height: 10px;
