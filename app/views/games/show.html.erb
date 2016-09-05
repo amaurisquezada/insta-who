@@ -20,48 +20,60 @@
 			<div class="guesses" id="guess5"></div>
 		</div>	
 		<div id="keywords">
-			<div>
-			<h5>Hair Color</h5>
-			<% @hair_color_tags.each do |tag| %>
-				<%= button_to tag,  {controller: "games", action: "update_card_position", selection: tag}, method: 'post', remote: true %>
-			<% end %>
+			<div class="section-container">
+				<h5>Hair Color</h5>
+				<% @hair_color_tags.each do |tag| %>
+					<%= button_to tag,  {controller: "games", action: "update_card_position", selection: tag}, method: 'post', remote: true %>
+				<% end %>
 			</div>
-			<div>
-			<h5>Hair Length</h5>
-			<% @hair_length_tags.each do |tag| %>
-				<%= button_to tag,  {controller: "games", action: "update_card_position", selection: tag}, method: 'post', remote: true %>
-			<% end %>
+			<div class="section-container">
+				<h5>Hair Length</h5>
+				<% @hair_length_tags.each do |tag| %>
+					<%= button_to tag,  {controller: "games", action: "update_card_position", selection: tag}, method: 'post', remote: true %>
+				<% end %>
 			</div>
-			<div>
-			<h5>Facial Hair</h5>
-			<% @facial_hair_tags.each do |tag| %>
-				<%= button_to tag,  {controller: "games", action: "update_card_position", selection: tag}, method: 'post', remote: true %>
-			<% end %>
+			<div class="section-container">
+				<h5>Facial Hair</h5>
+				<% @facial_hair_tags.each do |tag| %>
+					<%= button_to tag,  {controller: "games", action: "update_card_position", selection: tag}, method: 'post', remote: true %>
+				<% end %>
 			</div>
-			<h5>Eye Color</h5>
-			<% @eye_color_tags.each do |tag| %>
-				<%= button_to tag,  {controller: "games", action: "update_card_position", selection: tag}, method: 'post', remote: true %>
-			<% end %>
-			<h5>Skin Color</h5>
-			<% @skin_color_tags.each do |tag| %>
-				<%= button_to tag,  {controller: "games", action: "update_card_position", selection: tag}, method: 'post', remote: true %>
-			<% end %>
-			<h5>Sex</h5>
-			<% @sex_tags.each do |tag| %>
-				<%= button_to tag,  {controller: "games", action: "update_card_position", selection: tag}, method: 'post', remote: true %>
-			<% end %>
-			<h5>Relationship Status</h5>
-			<% @relationship_tags.each do |tag| %>
-				<%= button_to tag,  {controller: "games", action: "update_card_position", selection: tag}, method: 'post', remote: true %>
-			<% end %>
-			<h5>Computer Type</h5>
-			<% @computer_tags.each do |tag| %>
-				<%= button_to tag,  {controller: "games", action: "update_card_position", selection: tag}, method: 'post', remote: true %>
-			<% end %>
-			<h5>Miscellaneous Characteristics</h5>
-			<% @misc_tags.each do |tag| %>
-				<%= button_to tag,  {controller: "games", action: "update_card_position", selection: tag}, method: 'post', remote: true %>
-			<% end %>
+			<div class="section-container">
+				<h5>Eye Color</h5>
+				<% @eye_color_tags.each do |tag| %>
+					<%= button_to tag,  {controller: "games", action: "update_card_position", selection: tag}, method: 'post', remote: true %>
+				<% end %>
+			</div>
+			<div class="section-container">
+				<h5>Skin Color</h5>
+				<% @skin_color_tags.each do |tag| %>
+					<%= button_to tag,  {controller: "games", action: "update_card_position", selection: tag}, method: 'post', remote: true %>
+				<% end %>
+			</div>
+			<div class="section-container">
+				<h5>Sex</h5>
+				<% @sex_tags.each do |tag| %>
+					<%= button_to tag,  {controller: "games", action: "update_card_position", selection: tag}, method: 'post', remote: true %>
+				<% end %>
+			</div>
+			<div class="section-container">
+				<h5>Relationship Status</h5>
+				<% @relationship_tags.each do |tag| %>
+					<%= button_to tag,  {controller: "games", action: "update_card_position", selection: tag}, method: 'post', remote: true %>
+				<% end %>
+			</div>
+			<div class="section-container">
+				<h5>Computer Type</h5>
+				<% @computer_tags.each do |tag| %>
+					<%= button_to tag,  {controller: "games", action: "update_card_position", selection: tag}, method: 'post', remote: true %>
+				<% end %>
+			</div>
+			<div class="section-container">
+				<h5>Miscellaneous Characteristics</h5>
+				<% @misc_tags.each do |tag| %>
+					<%= button_to tag,  {controller: "games", action: "update_card_position", selection: tag}, method: 'post', remote: true %>
+				<% end %>
+			</div>
 
 		</div>
 
