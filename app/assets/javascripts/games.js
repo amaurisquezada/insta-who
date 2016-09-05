@@ -4,7 +4,7 @@
 		var rW = $(window).width() - ($(".one-card-container").width()* 6) - $("#right-wrapper").width();
 		$("#right-wrapper").css("right", rW/2);
 		$(".howto").css("top", $(".one-card-container").height()*4 + 20)
-		$(".warning").css("top", $(".one-card-container").height()*4 + 55)
+		$(".warning").css("top", $(".one-card-container").height()*4 + 60)
 };
 
 $( window ).load(gameSizer);
