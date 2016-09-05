@@ -107,9 +107,7 @@
 .section-container {
   width: 100%;
   position: relative;
-  float: left;
-  margin-bottom: 10px;
-  border: 1px black solid; }
+  float: left; }
 
 .section-container h5 {
   width: 100%;
