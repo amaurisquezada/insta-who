@@ -14,13 +14,12 @@ body {
 .landing-container button {
   text-align: center;
   border-radius: 25px;
-  position: absolute;
-  border: 10px solid black;
+  position: relative;
+  border: 10px solid white;
   background: #B22222;
   padding-left: 95px;
-  padding-right: 25px;
-  margin-left: 10%;
-  margin-top: 60vh; }
+  padding-right: 95px; 
+}
 
 #main-page-button {
   color: white;
