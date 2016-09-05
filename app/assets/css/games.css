@@ -97,8 +97,12 @@
   top: 18vw;
   left: 20px;
   height: 55vh;
-  overflow: auto;
-  border: 1px solid black; }
+  overflow: auto; }
+
+#keywords h5 {
+  float: left;
+  width: 100%;
+  text-decoration: underline; }
 
 .guesses {
   height: 10px;

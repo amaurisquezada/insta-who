@@ -7,7 +7,7 @@
 				</div>
 			<% end %>
 			<h5 class="instructions">Select the buttons on the right to guess a character trait. Click on a card above to guess the mystery person. Players can guess on up to 5 character traits but may only guess the mystery card once. Happy guessing!</h5>
-			<h6 class="instructions warning">WARNING: Player traits based on self-identification! ¯\_(ツ)_/¯</h6>
+			<h6 class="instructions warning">DISCLAIMER: People in cards are NYCDA Students and TA's. Player traits are based on self-identification! ¯\_(ツ)_/¯</h6>
 		</div>
 	</div>
 	<div id="right-wrapper">
@@ -20,9 +20,43 @@
 			<div class="guesses" id="guess5"></div>
 		</div>	
 		<div id="keywords">
-			<% @available_tags.each do |tag| %>
+			<h5>Hair Color</h5>
+			<% @hair_color_tags.each do |tag| %>
 				<%= button_to tag,  {controller: "games", action: "update_card_position", selection: tag}, method: 'post', remote: true %>
 			<% end %>
+			<h5>Hair Length</h5>
+			<% @hair_length_tags.each do |tag| %>
+				<%= button_to tag,  {controller: "games", action: "update_card_position", selection: tag}, method: 'post', remote: true %>
+			<% end %>
+			<h5>Facial Hair</h5>
+			<% @facial_hair_tags.each do |tag| %>
+				<%= button_to tag,  {controller: "games", action: "update_card_position", selection: tag}, method: 'post', remote: true %>
+			<% end %>
+			<h5>Eye Color</h5>
+			<% @eye_color_tags.each do |tag| %>
+				<%= button_to tag,  {controller: "games", action: "update_card_position", selection: tag}, method: 'post', remote: true %>
+			<% end %>
+			<h5>Skin Color</h5>
+			<% @skin_color_tags.each do |tag| %>
+				<%= button_to tag,  {controller: "games", action: "update_card_position", selection: tag}, method: 'post', remote: true %>
+			<% end %>
+			<h5>Sex</h5>
+			<% @sex_tags.each do |tag| %>
+				<%= button_to tag,  {controller: "games", action: "update_card_position", selection: tag}, method: 'post', remote: true %>
+			<% end %>
+			<h5>Relationship Status</h5>
+			<% @relationship_tags.each do |tag| %>
+				<%= button_to tag,  {controller: "games", action: "update_card_position", selection: tag}, method: 'post', remote: true %>
+			<% end %>
+			<h5>Computer Type</h5>
+			<% @computer_tags.each do |tag| %>
+				<%= button_to tag,  {controller: "games", action: "update_card_position", selection: tag}, method: 'post', remote: true %>
+			<% end %>
+			<h5>Miscellaneous Characteristics</h5>
+			<% @misc_tags.each do |tag| %>
+				<%= button_to tag,  {controller: "games", action: "update_card_position", selection: tag}, method: 'post', remote: true %>
+			<% end %>
+
 		</div>
 
 	</div>
