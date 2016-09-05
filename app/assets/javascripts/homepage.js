@@ -10,20 +10,13 @@ $(document).ready(function(){
 			$('.backdrop').css('display', 'none');
 	})
 
-	$("#signup-toggle-button").css("margin-left", ($(window).width() - $("#signup-toggle-button").width() - 190)/2 )
+	function homepageCenter() {
+		$("#signup-toggle-button").css("margin-left", ($(window).width() - $("#signup-toggle-button").width() - 190)/2 )
 
-	$("#signup-toggle-button").css("margin-top", ($(window).height() - $("#signup-toggle-button").height())/2 )
+		$("#signup-toggle-button").css("margin-top", ($(window).height() - $("#signup-toggle-button").height())/2 )
+	}
 
-	console.log($("#signup-toggle-button").height(), "height")
-	console.log($("#signup-toggle-button").width(), "width")
-	console.log($(window).width(), "window width")
-	console.log($(window).height(), "window height")
-	var mL = ($(window).width() - $("#signup-toggle-button").width())/2;
-	var mT = ($(window).height() - $("#signup-toggle-button").height())/2;
-	console.log(mL, "margin left")
-	console.log(mT, "margin-top")
-
-
-
+	homepageCenter();
+	$(window).resize(homepageCenter)
 
 });
