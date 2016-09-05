@@ -104,12 +104,8 @@
   height: 55vh;
   overflow: auto; }
 
-.section-container {
-  width: 100%;
-  position: relative;
-  float: left; }
-
-.section-container h5 {
+#keywords h5 {
+  float: left;
   width: 100%;
   text-decoration: underline; }
 
