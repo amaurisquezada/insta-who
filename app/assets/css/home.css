@@ -1,12 +1,13 @@
 /*@import 'mixin';*/
+body {
+  background-size: 100%;
+  background-repeat: no-repeat; }
+
 .landing-container {
   width: 100vw;
   height: 100vh;
-  background: url(background5.jpeg) no-repeat center center fixed; }
-
-body {
-  background-size: cover;
-  background-repeat: no-repeat; }
+  background: url(background5.jpeg) no-repeat center center fixed;
+  background-size: cover; }
 
 #nav-toggle-button, #main-nav-container {
   display: none; }
