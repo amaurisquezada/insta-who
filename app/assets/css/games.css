@@ -27,11 +27,16 @@
 .instructions {
   float: left;
   display: block;
-  margin-top: 0;
-  width: 80%; }
+  width: 80%;
+  position: absolute;
+  left: 0; }
+
+.howto {
+  bottom: 50px; }
 
 .warning {
-  color: red; }
+  color: red;
+  bottom: 20px; }
 
 #winner_name {
   font-size: 20px;
