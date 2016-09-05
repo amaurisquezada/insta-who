@@ -20,18 +20,24 @@
 			<div class="guesses" id="guess5"></div>
 		</div>	
 		<div id="keywords">
+			<div>
 			<h5>Hair Color</h5>
 			<% @hair_color_tags.each do |tag| %>
 				<%= button_to tag,  {controller: "games", action: "update_card_position", selection: tag}, method: 'post', remote: true %>
 			<% end %>
+			</div>
+			<div>
 			<h5>Hair Length</h5>
 			<% @hair_length_tags.each do |tag| %>
 				<%= button_to tag,  {controller: "games", action: "update_card_position", selection: tag}, method: 'post', remote: true %>
 			<% end %>
+			</div>
+			<div>
 			<h5>Facial Hair</h5>
 			<% @facial_hair_tags.each do |tag| %>
 				<%= button_to tag,  {controller: "games", action: "update_card_position", selection: tag}, method: 'post', remote: true %>
 			<% end %>
+			</div>
 			<h5>Eye Color</h5>
 			<% @eye_color_tags.each do |tag| %>
 				<%= button_to tag,  {controller: "games", action: "update_card_position", selection: tag}, method: 'post', remote: true %>
