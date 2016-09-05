@@ -5,7 +5,7 @@
   background: url(background5.jpeg) no-repeat center center fixed; }
 
 body {
-  background-size: 100%;
+  background-size: cover;
   background-repeat: no-repeat; }
 
 #nav-toggle-button, #main-nav-container {
@@ -14,12 +14,11 @@ body {
 .landing-container button {
   text-align: center;
   border-radius: 25px;
-  position: relative;
+  position: absolute;
   border: 10px solid white;
   background: #B22222;
   padding-left: 95px;
-  padding-right: 95px; 
-}
+  padding-right: 95px; }
 
 #main-page-button {
   color: white;
