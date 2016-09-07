@@ -29,23 +29,23 @@ class GamesController < ApplicationController
     @misc_tags = []
 
     Tag.all.each do |tg|
-      if tg.id == 68 || tg.id == 40 || tg.id == 38 || tg.id == 66
+      if tg.category == "hair_color" && tg.id != 39
         @hair_color_tags << tg.description
-      elsif tg.id == 41 || tg.id == 42 || tg.id == 43 || tg.id == 44
+      elsif tg.category == "hair_length"
           @hair_length_tags << tg.description
-        elsif tg.id == 45 || tg.id == 46 || tg.id == 47
+        elsif tg.category == "facial_hair"
           @facial_hair_tags << tg.description
-        elsif tg.id == 48 || tg.id == 49 || tg.id == 50 || tg.id == 67
+        elsif tg.category == "eye_color"
             @eye_color_tags << tg.description
-          elsif tg.id == 51 || tg.id == 52 
+          elsif tg.category == "skin_color" 
               @skin_color_tags << tg.description
-            elsif tg.id == 54 || tg.id == 55
+            elsif tg.category == "sex"
               @sex_tags << tg.description
-              elsif tg.id == 61 || tg.id == 62 || tg.id == 63
+              elsif tg.category == "relationship_status"
                   @relationship_tags << tg.description
-                elsif tg.id == 57 || tg.id == 58 
+                elsif tg.category == "computer_type"
                   @computer_tags << tg.description
-                elsif tg.id != 39
+                elsif tg.category == "misc" && tg.id != 39
                   @misc_tags << tg.description
         end            
     end
