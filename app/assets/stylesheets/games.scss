@@ -1,4 +1,4 @@
-#card-container {
+#card-container, #msg-wrapper {
 	-webkit-perspective: 5000px;
 	width: 80%;
 	height: 95vh;
@@ -7,6 +7,10 @@
 	left: 10px;
 	-webkit-backface-visibility: hidden;
 	backface-visibility: hidden;
+}
+
+#msg-wrapper {
+	display: none;
 }
 
 #bottom-text {
@@ -54,7 +58,7 @@
 }
 
 #winner_name {
-	font-size: 20px;
+	font-size: 1.4677vw;
 	color: white;
 	z-index: 500;
 	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
@@ -150,7 +154,7 @@
 }
 
 .indent {
-	margin-right: 1.5813vw;
+	margin-right: 1.4813vw;
 }
 
 #all-guesses {
@@ -162,35 +166,34 @@
 
 #you-win, #you-lose{
 	display: none;
-	position: absolute;
-	height: 40vh;
-	width: 40vh;
+	margin: 11.94548vw auto;
+	height: 21.15632vw;
+	width: 21.82432vw;
 	z-index: 300;
 	background: white;
-	left: 30%;
-	top: 20vh;
+	left: 50%;
+	top: 11.04548vw;
 }
 
 #you-win {
-	border: 4px green solid;
+	border: .7338vw green solid;
 	border-radius: 4px;
 	color: green;
 }
 
 #you-lose {
-	border: 4px red solid;
+	border: .7338vw red solid;
 	border-radius: 4px;
 	color: red;
 }
 
 #result-win, #result-lose {
-	font-size: 50px;
+	font-size: 3.6693vw;
 	text-align: center;
 }
 
 #you-win .button_to, #you-lose .button_to {
-	position: absolute;
-	left: 15vh;
+	text-align: center;
 }
 
 #result-win {
@@ -205,6 +208,10 @@
 	float: left;
 	margin-right: .3669vw;
 	margin-bottom: .3669vw;
+}
+
+#keywords .button_to input:hover {
+	cursor: pointer;
 }
 
 #game-wrapper {

@@ -62,11 +62,13 @@
 		</div>
 
 	</div>
-	<div id="you-win">
-		<h1 id="result-win">YOU WIN!</h1>
-		<%= button_to "Play Again!", play_again_path, method: 'post', remote: true%>
-	</div>
-	<div id="you-lose">
-		<h1 id="result-lose">YOU LOSE!</h1>
-		<%= button_to "Play Again!", play_again_path, method: 'post', remote: true%>
+		<div id="msg-wrapper">
+		<div id="you-win">
+			<h1 id="result-win">YOU WIN!</h1>
+			<%= button_to "Play Again!", play_again_path, method: 'post', remote: true%>
+		</div>
+		<div id="you-lose">
+			<h1 id="result-lose">YOU LOSE!</h1>
+			<%= button_to "Play Again!", play_again_path, method: 'post', remote: true%>
+		</div>
 	</div>

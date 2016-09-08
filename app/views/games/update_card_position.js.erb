@@ -40,15 +40,15 @@
 		<% @mygame.cards.each do |student| %>
 			$('#' + "<%=student.name.gsub(" ", "-").downcase%>").click(function(){
 				if($('#' + "<%=student.name.gsub(" ", "-").downcase%>-label").html() === winningCard && winner === undefined){
+					$("#msg-wrapper").css('display', 'block')
 					$('#you-win').css('display', 'block');
 					winner = true;
 				} else {
+						$("#msg-wrapper").css('display', 'block')
 						$('#you-lose').css('display', 'block');
 						winner = false;
 					};
 					$('.selected').replaceWith("<div id='winning_card'><span id='winner_name'></span></div")
-					$('#winning_card').css("width", $('.one-card-container').width())
-					$('#winning_card').css("height", $('.one-card-container').width() - $('.one-card-container').width()/31)
 					$('#winning_card').css('background', 'url("<%=raw @mycard.avatar.url%>")')
 					$('#winning_card').css('background-size', '100% 100%')
 					$('#winner_name').html("<%=raw @mycard.name%>")
