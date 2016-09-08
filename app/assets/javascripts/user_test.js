@@ -3,12 +3,20 @@
   };
 
   function non_match(el){
-  			$(".selected").css("border-color", "green")
-        el.css("border", "2px solid red")
+  	var cardWidth = el.width()
+  			$(".selected").css("border-color", "#49fb35")
+        el.css("border-color", "red")
         setTimeout(function(){
         	 el.css('-webkit-transform', 'rotateX(-180deg)');
    				 el.css('transform', 'rotateX(-180deg)');
    				 $(".selected").css("border-color", "black")
-   				 el.children().css("border", "black solid 2px")
-        }, 1000);   
+   				 el.children().css("border", "black solid " + cardWidth/31 + "px")
+   				 el.children().css("top", "-" + cardWidth/31 + "px")
+   				 el.children().css("left", "-" + cardWidth/31 + "px")
+        }, 1000);
+   $(window).resize(function(){
+   	$(".back").css("border-width", $(".one-card-container").width()/31)
+   	$(".back").css("top", "-" + $(".back").width()/31 + "px")
+   	$(".back").css("left", "-" + $(".back").width()/31 + "px")
+   })
   };

@@ -1,13 +1,16 @@
 	function gameSizer() {
-		$(".one-card-container").css('height', $(".one-card-container").width() - 6);
-		$(".selected").css('width', $(".one-card-container").width());
-		$(".selected").css('height', $(".selected").width());
-		$("#winning-card").css('width', $(".one-card-container").width());
-		$("#winning-card").css('height', $(".selected").width());
-		var rW = $(window).width() - ($(".one-card-container").width()* 6) - $("#right-wrapper").width();
+		var cardWidth = $(".one-card-container").width()
+		$(".one-card-container").css('height', cardWidth - (cardWidth/31));
+		$(".selected").css('width', cardWidth);
+		$(".selected").css('height', cardWidth - (cardWidth/31));
+		$(".one-card-container").css('border-width', cardWidth/31)
+		$(".card_names").css("font-size", cardWidth/8)
+		$("#winning-card").css('width', cardWidth);
+		$("#winning-card").css('height', cardWidth);
+		$("#all-guesses").css("width", cardWidth)
+		$(".indent").css("margin-right", ($("#all-guesses").width()-($(".indent").width() * 5))/4 - 3)
+		var rW = $(window).width() - (cardWidth* 6) - $("#right-wrapper").width();
 		$("#right-wrapper").css("right", rW/2);
-		$(".howto").css("top", $(".one-card-container").height()*4 + 32)
-		$(".warning").css("top", $(".one-card-container").height()*4 + 70)
 
 };
 
