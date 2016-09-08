@@ -15,13 +15,9 @@ $(document).ready(function(){
 		$("#right-wrapper").css("right", rW/2);
 		$("#right-wrapper").css("height", ($(".one-card-container").height() * 4) + 21 + (cardWidth / 31 * 4));
 		$("#keywords").css("height", $("#right-wrapper").height() - $(".selected").height() - 12 - 10 - 10 - 4 )
+		console.log($(window).width())
 };
-
-gameSizer();
-
-$(window).load(gameSizer)
 $( window ).resize(gameSizer);
-
 })
 
 
