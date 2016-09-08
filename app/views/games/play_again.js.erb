@@ -10,23 +10,16 @@
 	    return this;
 		};
 
-		var cardWidth = $(".one-card-container").width();
-		var borderWidth = $('.one-card-container').width()/31
+		var cardWidth = "10.692vw";
+		var borderWidth = ".349vw"
 		<% @mygame.cards.each do |student| %>
 			$('#' + "<%=student.name.gsub(" ", "-").downcase%>").off('click');
 		<% end %>
-
-
 		$('.one-card-container').children().css("border", "none")
    	$('.one-card-container').children().css("top", "0px")
    	$('.one-card-container').children().css("left", "0px")
-
-
-
-
-
   	$('.one-card-container').css('transform', 'rotateX(0deg)');
-  	$('.one-card-container').css('border', borderWidth + 'px black solid');
+  	$('.one-card-container').css('border', borderWidth + ' black solid');
   	$('#you-win').css('display', 'none');
   	$('#you-lose').css('display', 'none');
 		$('.guesses').css('background', 'white');

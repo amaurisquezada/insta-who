@@ -12,8 +12,8 @@
   height: 2vh;
   width: 80%;
   position: absolute;
-  bottom: 0;
-  left: 13px; }
+  top: 47.93vw;
+  left: 1vw; }
 
 .one-card-container {
   -webkit-perspective: 5000px;
@@ -111,8 +111,9 @@
 
 #keywords {
   height: 31.445vw;
+  width: 90%;
   overflow: auto;
-  border: 2px black solid;
+  border: .14677vw black solid;
   margin: .73387vw auto; }
 
 #keywords h5 {
