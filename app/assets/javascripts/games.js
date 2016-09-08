@@ -17,7 +17,9 @@ $(document).ready(function(){
 		$("#keywords").css("height", $("#right-wrapper").height() - $(".selected").height() - 12 - 10 - 10 - 4 )
 };
 
-gameSizer()
+gameSizer();
+
+$(window).load(gameSizer)
 $( window ).resize(gameSizer);
 
 })
