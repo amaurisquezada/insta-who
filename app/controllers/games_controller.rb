@@ -17,6 +17,7 @@ class GamesController < ApplicationController
     end
   	MysteryCard.where(user_id: @myuser.id, game_id: @mygame.id).destroy_all
   	MysteryCard.create(user_id: @myuser.id, game_id: @mygame.id, card_name: @mycard.name, counter: 0)
+    @duh = MysteryCard.last
     @available_tags = @mygame.cards.map{|card| card.tags.map{|tag| tag.description}}.flatten.uniq.sort
     @hair_color_tags = []
     @hair_length_tags = []
@@ -30,23 +31,23 @@ class GamesController < ApplicationController
 
     Tag.all.each do |tg|
       if tg.category == "hair_color" && tg.id != 39
-        @hair_color_tags << tg.description
+        @hair_color_tags << tg
       elsif tg.category == "hair_length"
-          @hair_length_tags << tg.description
+          @hair_length_tags << tg
         elsif tg.category == "facial_hair"
-          @facial_hair_tags << tg.description
+          @facial_hair_tags << tg
         elsif tg.category == "eye_color"
-            @eye_color_tags << tg.description
+            @eye_color_tags << tg
           elsif tg.category == "skin_color" 
-              @skin_color_tags << tg.description
+              @skin_color_tags << tg
             elsif tg.category == "sex"
-              @sex_tags << tg.description
+              @sex_tags << tg
               elsif tg.category == "relationship_status"
-                  @relationship_tags << tg.description
+                  @relationship_tags << tg
                 elsif tg.category == "computer_type"
-                  @computer_tags << tg.description
+                  @computer_tags << tg
                 elsif tg.category == "misc" && tg.id != 39
-                  @misc_tags << tg.description
+                  @misc_tags << tg
         end            
     end
   end
@@ -59,6 +60,7 @@ class GamesController < ApplicationController
   	@counter = @mysterycard.counter
   	@mycard = @mygame.cards.where(name: @mysterycard.card_name).first
     @selection = params[:selection]
+    @category = params[:category]
     respond_to do |format|
         format.html { redirect_to :back, notice: 'Card updated.' }
         format.js

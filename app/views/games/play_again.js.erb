@@ -10,7 +10,7 @@
 	    return this;
 		};
 
-
+		var cardWidth = $(".one-card-container").width();
 		var borderWidth = $('.one-card-container').width()/31
 		<% @mygame.cards.each do |student| %>
 			$('#' + "<%=student.name.gsub(" ", "-").downcase%>").off('click');
@@ -32,6 +32,8 @@
 		$('.guesses').css('background', 'white');
 		$('#card-container').randomize($('.one-card-container'));
 		newMysteryId = "<%= raw @mycard.name.downcase.gsub(' ', '-') %>";
-		$('#winning_card').replaceWith("<div class='selected'></div")
+		$('#winning_card').replaceWith("<div class='selected'></div>")
+		$('.selected').css("width", cardWidth)
+		$('.selected').css("width", cardWidth - borderWidth)
   	$('#keywords .button_to input').prop('disabled', false);
 		winner = undefined;

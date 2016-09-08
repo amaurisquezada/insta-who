@@ -6,11 +6,16 @@
 		<% @mygame.cards.each do |student| %>
 			<% @my_tags = student.tags.map(&:description) %>
 			check = "<%= raw @selection %>"
+			category = "<%= raw @category %>"
 			array = <%= raw @my_tags %>;
 			myCardAttr = <%= raw @mycard.tags.map(&:description) %>;
-			if (array.includes(check) === myCardAttr.includes(check)){
-			}	else {
-					non_match($('.' + "<%=student.name.gsub(" ", "-").downcase%>"));
+			if (myCardAttr.includes(check) && !array.includes(check)) {
+				matchElim($('.' + "<%=student.name.gsub(" ", "-").downcase%>"));
+				if (category !== "misc" || $("." + category).length == 2){
+					$("." + category).prop("disabled", true)
+				}
+			}	else if (!myCardAttr.includes(check) && array.includes(check)) {
+					nonMatchElim($('.' + "<%=student.name.gsub(" ", "-").downcase%>"));
 				};
 		<% end %>
 
@@ -19,6 +24,10 @@
 	    return $( this ).val() === check;
 	  })
     .prop( "disabled", true );
+
+    if ($("." + category + ":enabled").length < 2) {
+			$("." + category).prop("disabled", true)
+		}
 
 		$('#guess' + counter).css('background', 'yellow')
 		counter += 1
