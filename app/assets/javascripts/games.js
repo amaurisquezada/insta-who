@@ -3,6 +3,8 @@
 		$(".one-card-container").css('height', cardWidth - (cardWidth/31));
 		$(".selected").css('width', cardWidth);
 		$(".selected").css('height', cardWidth - (cardWidth/31));
+		$("#winning-card").css('width', cardWidth);
+		$("#winning-card").css('height', cardWidth - (cardWidth/31));
 		$(".one-card-container").css('border-width', cardWidth/31)
 		$(".card_names").css("font-size", cardWidth/8)
 		$("#winning-card").css('width', cardWidth);
