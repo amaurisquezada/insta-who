@@ -219,6 +219,11 @@
   font-weight: bold;
 }
 
+#keywords .button_to input:disabled {
+	background: lightgrey;
+	color: grey;
+}
+
 #keywords .button_to input:hover {
 	cursor: pointer;
 }
