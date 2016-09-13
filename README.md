@@ -1,4 +1,4 @@
-== Insta-Who
+## Insta-Who
 
 Insta-Who is an online recreation of the popular board game "Guess Who?"
 www.insta-who.herokuapp.com
