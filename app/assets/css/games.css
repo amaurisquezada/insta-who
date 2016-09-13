@@ -179,6 +179,14 @@
   margin-right: .3669vw;
   margin-bottom: .3669vw; }
 
+#keywords .button_to input {
+  border-radius: .4vw;
+  background: #B22222;
+  padding: .4403vw;
+  font-size: .8806vw;
+  color: white;
+  font-weight: bold; }
+
 #keywords .button_to input:hover {
   cursor: pointer; }
 
