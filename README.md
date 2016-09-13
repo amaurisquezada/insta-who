@@ -6,7 +6,7 @@ Insta-Who is an online recreation of the popular board game "_Guess Who?_"
 
 **How to play:**
 
-* When the game begins, there are 24 face-up game cards each representing a different person. There is also a face-down mystery card. The goal of the game is to guess which of the 24 game cards is represented by the mystery card.
+* When the game begins, there are 24 face-up game cards each representing a different person. There is also a face-down mystery card on the top-right corner. The goal of the game is to guess which of the 24 game cards is represented by the mystery card.
 
 * Underneath the mystery card are a series of buttons. Each button contains a specific character trait. Players must guess character traits by clicking on the buttons in order to narrow down the game cards.
 
