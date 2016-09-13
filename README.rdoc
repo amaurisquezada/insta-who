@@ -1,19 +1,19 @@
-== README
+== Insta-Who
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Insta-Who is an online recreation of the popular board game "Guess Who?"
+[www.insta-who.herokuapp.com](www.insta-who.herokuapp.com)
 
-Things you may want to cover:
+How to play:
 
-* Ruby version
+* When the game begins, there are 24 face-up game cards, each representing a different person. There is also a face-down mystery card. The goal of the game is to guess which of the 24 game cards is represented by the mystery card.
 
-* System dependencies
+* Underneath the mystery card are a series of buttons. Each button contains a specific character trait. Players must guess character traits by clicking on the buttons in order to narrow down the game cards.
 
-* Configuration
+	* Validation of character trait selection is done automatically. For example, if a player clicks on the character trait "short hair", the border of the mystery card will light up green or red. If the card lights up green, it signifies that the person in the mystery card does indeed have short hair. All cards that do not have short hair will light up red and flip down. Conversely, if the mystery card does not have short hair, it will light up red and all cards that do have short hair will light green and flip down.
 
-* Database creation
+* As character traits are selected, the field of potential matches will narrow down. A player has up to 5 guesses to narrow down to the potential game card.
 
-* Database initialization
+* While a player may guess up to 5 different character traits, he/she may only guess who the mystery person is once. A player may click on any of the up-facing game cards to guess that person as the mystery card. 
 
 * How to run the test suite
 
