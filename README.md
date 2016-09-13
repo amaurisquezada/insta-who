@@ -1,7 +1,7 @@
 ## Insta-Who
 
-Insta-Who is an online recreation of the popular board game "Guess Who?"
-www.insta-who.herokuapp.com
+Insta-Who is an online recreation of the popular board game "Guess Who?"  
+http://insta-who.herokuapp.com/
 
 How to play:
 
@@ -9,7 +9,7 @@ How to play:
 
 * Underneath the mystery card are a series of buttons. Each button contains a specific character trait. Players must guess character traits by clicking on the buttons in order to narrow down the game cards.
 
-	** Validation of character trait selection is done automatically. For example, if a player clicks on the character trait "short hair", the border of the mystery card will light up green or red. If the card lights up green, it signifies that the person in the mystery card does indeed have short hair. All cards that do not have short hair will light up red and flip down. Conversely, if the mystery card does not have short hair, it will light up red and all cards that do have short hair will light green and flip down.
+	* Validation of character trait selection is done automatically. For example, if a player clicks on the character trait "short hair", the border of the mystery card will light up green or red. If the card lights up green, it signifies that the person in the mystery card does indeed have short hair. All cards that do not have short hair will light up red and flip down. Conversely, if the mystery card does not have short hair, it will light up red and all cards that do have short hair will light green and flip down.
 
 * As character traits are selected, the field of potential matches will narrow down. A player has up to 5 guesses to narrow down to the potential game card.
 
