@@ -1,70 +1,62 @@
-* {
-}
-
-/*.email-text {
-	font-size: 100px;
-	font-family: courier;
-}*/
-
 .user-link-links {
-	margin-left: 12em;
-	width: 20em;
-	text-align: center;
 	background: rgba(255, 255, 255, .7);
+	margin-left: 12em;
 	margin-top: -.5em;
+	text-align: center;
+	width: 20em;
 }
 
 #user-show-container{
-	width: 100%;
-	height: 100%;
 	background: rgba(220, 201, 178, .55);
 	font-family: courier;
+	height: 100%;
+	width: 100%;
 }
 
 .user-info-container{
-	padding-top: 45px;
-	background: url("pback3.jpeg");
 	background-size: cover; 
-	width: 100%;
-	height: 250px;
+	background: url("pback3.jpeg");
+	border-bottom: 1px solid #000;
 	display: inline-block;
 	float: left;
-	border-bottom: 1px solid #000;
+	height: 250px;
+	padding-top: 45px;
+	width: 100%;
 }
 
 .user-image{
-	width: 300px;
 	display: inline-block;
 	float: left;
 	margin-left: 170px;
+	width: 300px;
 }
 
 .user-links{
-	width: 700px;
-	margin: 10px 0px 0px 60px;
 	display: inline-block;
+	margin: 10px 0px 0px 60px;
+	width: 700px;
 }
 
 .play-game-button{
-	border-radius: 25px;
 	background: #B22222;
-	margin-top: .5em;
-	margin-left: 3.3em;
+	border-radius: 25px;
 	border: 10px solid white;
+	color: white;
+	font-size: 50px;
+	font-style: comic;
+	margin-left: 3.3em;
+	margin-top: .5em;
 	padding-left: 25px;
 	padding-right: 25px;
-	color: white;
 	text-align: center;
 	z-index: 1;
-	font-style: comic;
-	font-size: 50px;
 }
 
 .new-card-form-container{
-	width: 100%;
-	overflow: scroll;
 	display: inline-block;
 	margin: 50px 0px 0px 213px;
+	overflow: scroll;
+	width: 100%;
 
 	h3{
 		display: inline-block;
@@ -74,9 +66,9 @@
 .avatar-upload-field{
 	float: left;
 	input{
-		width: 130;
-		height: 25px;
 		display: inline-block;
+		height: 25px;
+		width: 130;
 	}
 
 	h2{
@@ -85,41 +77,41 @@
 }
 
 .attributes-area{
-	width: 50%;
 	display: inline-block;
 	margin-left: 20px;
+	width: 50%;
 }
 
 .drop-down-container{
-	width: 150px;
 	display: inline-block;
-	margin: 10px;
 	float: left;
+	margin: 10px;
+	width: 150px;
 }
 
 .drop-down{
-	width: 110px;
-	height: 35px;
 	font-size: 18px;
+	height: 35px;
+	width: 110px;
 }
 
 .new-card-submit{
+	display: inline-block;
 	padding-top: 40px;
 	width: 75px;
-	display: inline-block;
 
 	input{
-		width: 70px;
-		height: 25px;
-		font-size: 15px;
 		border-radius: 10px;
+		font-size: 15px;
+		height: 25px;
+		width: 70px;
 	}
 }
 
 #play-now-link a {
-	text-decoration: none;
-	font-weight: bold;
 	color: black;
+	font-weight: bold;
+	text-decoration: none;
 }
 
 

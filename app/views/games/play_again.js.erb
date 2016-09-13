@@ -1,33 +1,33 @@
-  	$.fn.randomize = function(selector){
-	    var $elems = selector ? $(this).find(selector) : $(this).children(),
-	        $parents = $elems.parent();
+	$.fn.randomize = function(selector){
+    var $elems = selector ? $(this).find(selector) : $(this).children(),
+        $parents = $elems.parent();
 
-	    $parents.each(function(){
-	        $(this).children(selector).sort(function(){
-	            return Math.round(Math.random()) - 0.5;
-	        }).detach().appendTo(this);
-	    });
-	    return this;
-		};
+    $parents.each(function(){
+        $(this).children(selector).sort(function(){
+            return Math.round(Math.random()) - 0.5;
+        }).detach().appendTo(this);
+    });
+    return this;
+	};
 
-		var cardWidth = "10.692vw";
-		var borderWidth = ".349vw"
-		<% @mygame.cards.each do |student| %>
-			$('#' + "<%=student.name.gsub(" ", "-").downcase%>").off('click');
-		<% end %>
-		$('.one-card-container').children().css("border", "none")
-   	$('.one-card-container').children().css("top", "0px")
-   	$('.one-card-container').children().css("left", "0px")
-  	$('.one-card-container').css('transform', 'rotateX(0deg)');
-  	$('.one-card-container').css('border', borderWidth + ' black solid');
-  	$('#msg-wrapper').css('display', 'none');
-  	$('#you-win').css('display', 'none');
-  	$('#you-lose').css('display', 'none');
-		$('.guesses').css('background', 'white');
-		$('#card-container').randomize($('.one-card-container'));
-		newMysteryId = "<%= raw @mycard.name.downcase.gsub(' ', '-') %>";
-		$('#winning_card').replaceWith("<div class='selected'></div>")
-		$('.selected').css("width", cardWidth)
-		$('.selected').css("width", cardWidth - borderWidth)
-  	$('#keywords .button_to input').prop('disabled', false);
-		winner = undefined;
+	var cardWidth = "10.692vw",
+	borderWidth = ".349vw";
+	<% @mygame.cards.each do |student| %>
+		$("#" + "<%=student.name.gsub(" ", "-").downcase%>").off("click");
+	<% end %>
+	$(".one-card-container").children().css("border", "none");
+ 	$(".one-card-container").children().css("top", "0px");
+ 	$(".one-card-container").children().css("left", "0px");
+	$(".one-card-container").css("transform", "rotateX(0deg)");
+	$(".one-card-container").css("border", borderWidth + " black solid");
+	$("#msg-wrapper").css("display", "none");
+	$("#you-win").css("display", "none");
+	$("#you-lose").css("display", "none");
+	$(".guesses").css("background", "white");
+	$("#card-container").randomize($(".one-card-container"));
+	newMysteryId = "<%= raw @mycard.name.downcase.gsub(' ', '-') %>";
+	$('#winning_card').replaceWith("<div class='selected'></div>");
+	$(".selected").css("width", cardWidth);
+	$(".selected").css("width", cardWidth - borderWidth);
+	$("#keywords .button_to input").prop("disabled", false);
+	winner = undefined;

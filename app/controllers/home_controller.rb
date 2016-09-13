@@ -1,8 +1,4 @@
 class HomeController < ApplicationController
-
-
-
-
   # before_action :logged_in_user, only: [:edit, :update]
 
   # def logged_in_user
@@ -23,7 +19,7 @@ class HomeController < ApplicationController
       log_in @user
       redirect_to user_path(@user)
     else
-      render 'new'
+      render "new"
     end
   end
 
@@ -70,21 +66,6 @@ class HomeController < ApplicationController
     params.require(:user).permit(:email, :password, :password_confirmation, :avatar)
   end
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-	
   # def home
   # 	@user = User.new
   #   @users = User.all

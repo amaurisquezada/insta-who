@@ -1,56 +1,56 @@
-		<% @mygame.cards.each do |student| %>
-			$('#' + "<%=student.name.gsub(" ", "-").downcase%>").off('click');
-		<% end %>
+	<% @mygame.cards.each do |student| %>
+		$("#" + "<%=student.name.gsub(" ", "-").downcase%>").off("click");
+	<% end %>
 
-		var counter = <%= @counter %>;
-		<% @mygame.cards.each do |student| %>
-			<% @my_tags = student.tags.map(&:description) %>
-			check = "<%= raw @selection %>"
-			category = "<%= raw @category %>"
-			array = <%= raw @my_tags %>;
-			myCardAttr = <%= raw @mycard.tags.map(&:description) %>;
-			if (myCardAttr.includes(check) && !array.includes(check)) {
-				matchElim($('.' + "<%=student.name.gsub(" ", "-").downcase%>"));
-				if (category !== "misc" || $("." + category).length == 2){
-					$("." + category).prop("disabled", true)
-				}
-			}	else if (!myCardAttr.includes(check) && array.includes(check)) {
-					nonMatchElim($('.' + "<%=student.name.gsub(" ", "-").downcase%>"));
+	var counter = <%= @counter %>;
+	<% @mygame.cards.each do |student| %>
+		<% @my_tags = student.tags.map(&:description) %>
+		var check = "<%= raw @selection %>",
+		category = "<%= raw @category %>",
+		array = <%= raw @my_tags %>,
+		myCardAttr = <%= raw @mycard.tags.map(&:description) %>;
+		if (myCardAttr.includes(check) && !array.includes(check)) {
+			matchElim($("." + "<%=student.name.gsub(" ", "-").downcase%>"));
+			if ((category !== "misc" && category !== "facial_hair") || $("." + category).length == 2 || check == "no facial hair"){
+				$("." + category).prop("disabled", true);
+			}
+		}	else if (!myCardAttr.includes(check) && array.includes(check)) {
+				nonMatchElim($("." + "<%=student.name.gsub(" ", "-").downcase%>"));
+			};
+	<% end %>
+
+	$("#keywords .button_to input")
+	.filter(function() {
+	  return $( this ).val() === check;
+	})
+	.prop( "disabled", true );
+
+	if ($("." + category + ":enabled").length < 2 && (check != "beard" && check != "mustache")) {
+		$("." + category).prop("disabled", true);
+	}
+
+	$("#guess" + counter).css("background", "yellow")
+	counter += 1
+	if (counter > 5){
+		$("#keywords .button_to input").prop( "disabled", true );
+	} 
+
+	var winner = undefined,
+	winningCard = "<%= @mycard.name %>";
+	<% @mygame.cards.each do |student| %>
+		$("#" + "<%=student.name.gsub(" ", "-").downcase%>").click(function(){
+			if($("#" + "<%=student.name.gsub(" ", "-").downcase%>-label").html() === winningCard && winner === undefined){
+				$("#msg-wrapper").css("display", "block");
+				$("#you-win").css("display", "block");
+				winner = true;
+			} else {
+					$("#msg-wrapper").css("display", "block");
+					$("#you-lose").css("display", "block");
+					winner = false;
 				};
-		<% end %>
-
-		$("#keywords .button_to input")
-	  .filter(function() {
-	    return $( this ).val() === check;
-	  })
-    .prop( "disabled", true );
-
-    if ($("." + category + ":enabled").length < 2) {
-			$("." + category).prop("disabled", true)
-		}
-
-		$('#guess' + counter).css('background', 'yellow')
-		counter += 1
-		if (counter > 5){
-			$("#keywords .button_to input").prop( "disabled", true )
-		} 
-
-		var winner = undefined;
-		var winningCard = "<%= @mycard.name %>";
-		<% @mygame.cards.each do |student| %>
-			$('#' + "<%=student.name.gsub(" ", "-").downcase%>").click(function(){
-				if($('#' + "<%=student.name.gsub(" ", "-").downcase%>-label").html() === winningCard && winner === undefined){
-					$("#msg-wrapper").css('display', 'block')
-					$('#you-win').css('display', 'block');
-					winner = true;
-				} else {
-						$("#msg-wrapper").css('display', 'block')
-						$('#you-lose').css('display', 'block');
-						winner = false;
-					};
-					$('.selected').replaceWith("<div id='winning_card'><span id='winner_name'></span></div")
-					$('#winning_card').css('background', 'url("<%=raw @mycard.avatar.url%>")')
-					$('#winning_card').css('background-size', '100% 100%')
-					$('#winner_name').html("<%=raw @mycard.name%>")
-			});
-		<% end %>
+		$(".selected").replaceWith("<div id='winning_card'><span id='winner_name'></span></div");
+		$("#winning_card").css("background", "url('<%=raw @mycard.avatar.url%>')");
+		$("#winning_card").css("background-size", "100% 100%");
+		$("#winner_name").html("<%=raw @mycard.name%>");
+		});
+	<% end %>
