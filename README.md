@@ -16,4 +16,4 @@ Insta-Who is an online recreation of the popular board game "_Guess Who?_"
 
 * While a player may guess up to 5 different character traits, he/she may only guess who the mystery person is once. A player may click on any of the up-facing game cards to guess that person as the mystery card. If the selected game card matches the mystery card, the player wins. 
 
-NOTE: The game cards in the demo game are former New York COde and Design Academy classmates. All character traits are based on how these students self-identified.
+NOTE: The game cards in the demo game are former New York Code and Design Academy classmates. All character traits are based on how these students self-identified.
